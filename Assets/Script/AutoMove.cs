@@ -7,8 +7,8 @@ public class AutoMove : MonoBehaviour {
     public bool _usingKey = false;
 	public float Speed;
 	public float TSpeed;
-	private bool LDown = false;
-	private bool RDown=false; 
+    public bool LDown = false;
+    public bool RDown = false; 
 	private float OriTSpeed;
 	public Transform _camera;
 	public Camera _C;
@@ -55,16 +55,24 @@ public class AutoMove : MonoBehaviour {
 
             if (Input.GetAxis("Horizontal") < 0 || _leftTouchBtn.Pressed)
             {
+                LDown = true;
+                /*
                 this.transform.Rotate(new Vector3(1, 0, 0) * TSpeed);
                 _camera.transform.Rotate(new Vector3(0, 0, 1) * TSpeed);
                 TSpeed = OriTSpeed * 1.5f * Mathf.Abs(Input.GetAxis("Horizontal"));
-            } else if (Input.GetAxis("Horizontal") > 0 || _leftTouchBtn.Pressed)
+                */
+            } else if (Input.GetAxis("Horizontal") > 0 || _rightTouchBtn.Pressed)
             {
+                RDown = true;
+                /*
                 this.transform.Rotate(new Vector3(-1, 0, 0) * TSpeed);
                 _camera.transform.Rotate(new Vector3(0, 0, -1) * TSpeed);
                 TSpeed = OriTSpeed * 1.5f * Mathf.Abs(Input.GetAxis("Horizontal"));
+                */
             } else
             {
+                RDown = false;
+                LDown = false;
                 TSpeed = OriTSpeed;
             }
 
@@ -72,7 +80,7 @@ public class AutoMove : MonoBehaviour {
 
         this.transform.Translate(new Vector3(0, 0, 1) * Speed * Time.deltaTime * 60f);
 
-        /*
+        
 		if (LDown&&!END) {
 			this.transform.Rotate(new Vector3 (1, 0, 0) * TSpeed);
 			_camera.transform.Rotate(new Vector3 (0, 0, 1) * TSpeed);
@@ -94,7 +102,7 @@ public class AutoMove : MonoBehaviour {
             //StartCoroutine(WaitAndRotate(0.3f,new Vector3(0,0,-1)));
             TSpeed = TSpeed * 1.015f;
         }
-        */
+        
     }
 	IEnumerator BackToOrigin(float waitTime)
 	{
