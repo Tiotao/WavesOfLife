@@ -107,6 +107,7 @@ public class AutoMove : MonoBehaviour {
 	IEnumerator BackToOrigin(float waitTime)
 	{
 		yield return new WaitForSeconds (waitTime);
+        _C.GetComponent<UnityStandardAssets.ImageEffects.MotionBlur>().enabled = false;
 		Speed =0.05f;
 		ZoomIn = true;
 		ZoomOut = false;
@@ -121,6 +122,7 @@ public class AutoMove : MonoBehaviour {
 			Speed =0.15f;
 			ZoomOut = true;
             //  UnityStandardAssets.ImageEffects.
+            _C.GetComponent<UnityStandardAssets.ImageEffects.MotionBlur>().enabled = true;
             _C.GetComponent<UnityStandardAssets.ImageEffects.MotionBlur>().blurAmount = 0.9f;
 			StartCoroutine(BackToOrigin(2.2f));
 
@@ -131,6 +133,7 @@ public class AutoMove : MonoBehaviour {
             Speed = 0.15f;
             ZoomOut = true;
             //  UnityStandardAssets.ImageEffects.
+            _C.GetComponent<UnityStandardAssets.ImageEffects.MotionBlur>().enabled = true;
             _C.GetComponent<UnityStandardAssets.ImageEffects.MotionBlur>().blurAmount = 0.9f;
             StartCoroutine(BackToOrigin(1.5f));
 
