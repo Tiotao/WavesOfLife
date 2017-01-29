@@ -118,6 +118,8 @@ namespace ToJ
 
 			MeshRenderer maskMeshRenderer = GetComponent<MeshRenderer>();
 			MeshFilter maskMeshFilter = GetComponent<MeshFilter>();
+
+			
 			if (Application.isPlaying)
 			{
 				if (maskMeshRenderer != null)
