@@ -540,8 +540,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _moveRange: 1
-  _moveRangeMin: 0.5
-  _moveRangeMax: 1
+  _moveRangeMin: 0.3
+  _moveRangeMax: 0.6
   _moveTimeLowRange: 1.5
   _moveTimeHighRange: 3
 --- !u!114 &114000012715430934
