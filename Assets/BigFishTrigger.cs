@@ -14,6 +14,9 @@ public class BigFishTrigger : MonoBehaviour {
 	}
     private void OnTriggerEnter(Collider other)
     {
-
+        if(other.CompareTag("Player"))
+        {
+            bigfish.GetComponent<FishFlowBy>().Flow = true;
+        }
     }
 }

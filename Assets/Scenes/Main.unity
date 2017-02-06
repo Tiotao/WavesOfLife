@@ -1016,6 +1016,7 @@ MonoBehaviour:
   BG: []
   _spriteFolderName: BGanimation
   _frameNumber: 45
+  _frameRate: 12
   Begin: 39
 --- !u!1 &112687436
 GameObject:
@@ -1946,6 +1947,7 @@ MonoBehaviour:
   _controllerCanvas: {fileID: 239599448}
   _leftTouchBtn: {fileID: 0}
   _rightTouchBtn: {fileID: 0}
+  MaxSpeed: 0.05
   END: 0
   _camera: {fileID: 23196569}
   _C: {fileID: 23196568}

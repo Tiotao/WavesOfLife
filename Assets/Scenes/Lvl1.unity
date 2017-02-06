@@ -4222,7 +4222,7 @@ GameObject:
   - 54: {fileID: 1316519536}
   - 82: {fileID: 1316519535}
   m_Layer: 0
-  m_Name: Sphere
+  m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4334,6 +4334,7 @@ MonoBehaviour:
   _controllerCanvas: {fileID: 245046208}
   _leftTouchBtn: {fileID: 0}
   _rightTouchBtn: {fileID: 0}
+  MaxSpeed: 0.02
   END: 0
   _camera: {fileID: 83635657}
   _C: {fileID: 83635656}
@@ -6153,7 +6154,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 15
 --- !u!114 &1767928075
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6165,6 +6166,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6699c56d50eb2d043b00c7dc58f7c30f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bigfish: {fileID: 1908261490}
 --- !u!1 &1770850310
 GameObject:
   m_ObjectHideFlags: 0
