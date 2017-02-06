@@ -2443,6 +2443,27 @@ Prefab:
       propertyPath: _audio
       value: 
       objectReference: {fileID: 676629712}
+    - target: {fileID: 114000012026085146, guid: 3d6d8b1c222642b43a5f2d0ce6c2bb35,
+        type: 2}
+      propertyPath: _SpermObject
+      value: 
+      objectReference: {fileID: 1000010096414036, guid: d413d304035e81a4e88a4ccea5d03202,
+        type: 2}
+    - target: {fileID: 114000012026085146, guid: 3d6d8b1c222642b43a5f2d0ce6c2bb35,
+        type: 2}
+      propertyPath: _minInstanceScale
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012026085146, guid: 3d6d8b1c222642b43a5f2d0ce6c2bb35,
+        type: 2}
+      propertyPath: _maxInstanceScale
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012026085146, guid: 3d6d8b1c222642b43a5f2d0ce6c2bb35,
+        type: 2}
+      propertyPath: _initSpermAmount
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3d6d8b1c222642b43a5f2d0ce6c2bb35, type: 2}
   m_IsPrefabParent: 0
