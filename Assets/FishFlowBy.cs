@@ -52,7 +52,7 @@ public class FishFlowBy : MonoBehaviour
                     }
                     counter = 1 /4;
 
-                    if (i >= 45)
+                    if (i >= 72)
                     {
                         reverse = true;
                     }
