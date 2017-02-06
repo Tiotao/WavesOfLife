@@ -4,25 +4,28 @@ using UnityStandardAssets.ImageEffects;
 
 public class AutoMove : MonoBehaviour {
 
-    public bool _usingKey = false;
-	public float Speed;
-	public float TSpeed;
-    public bool LDown = false;
-    public bool RDown = false; 
-	private float OriTSpeed;
-	public Transform _camera;
-	public Camera _C;
-	public bool ZoomOut;
-	public bool ZoomIn;
-	private float _V = 0;
-	public bool END=false;
+    // game control
+    public float Speed;
+	public float TSpeed;	
     public float _lastHorizontalAxis = 0;
-	AudioSource _audio;
-
+    private float OriTSpeed;
     public GameObject _controllerCanvas;
     public PointerListener _leftTouchBtn;
     public PointerListener _rightTouchBtn;
 
+    // game state
+    public bool END = false;
+
+    // camera effect
+    public Transform _camera;
+	public Camera _C;
+    public bool ZoomOut;
+	public bool ZoomIn;
+    private float _V = 0;
+
+    // sound effect
+    private AudioSource _audio;
+    
     // Use this for initialization
     void Start () {
 		OriTSpeed = TSpeed;
@@ -36,7 +39,6 @@ public class AutoMove : MonoBehaviour {
 	void Update () {
 
 		if (ZoomOut) {
-			
 			_C.orthographicSize =  Mathf.SmoothDamp(_C.orthographicSize,9.0f,ref _V,0.5f);
 			if (_C.orthographicSize == 9) {
 				ZoomOut = false;
@@ -52,61 +54,39 @@ public class AutoMove : MonoBehaviour {
             Speed += (0.000025f * Time.deltaTime * 60f);
         }
 
+
+        // Obtain keyboard or touch input
+
         if (!END)
         {
 
+            // determine if keyboard value is increasing or decreasing
             float axisDifference = Input.GetAxis("Horizontal") - _lastHorizontalAxis;
             _lastHorizontalAxis = Input.GetAxis("Horizontal");
 
+            // left turn
             if ((axisDifference < 0 && Input.GetAxis("Horizontal") < 0) || Input.GetAxis("Horizontal") == -1f || _leftTouchBtn.Pressed)
             {
-                LDown = true;
-                /*
                 this.transform.Rotate(new Vector3(1, 0, 0) * TSpeed);
                 _camera.transform.Rotate(new Vector3(0, 0, 1) * TSpeed);
-                TSpeed = OriTSpeed * 1.5f * Mathf.Abs(Input.GetAxis("Horizontal"));
-                */
+                TSpeed = TSpeed * 1.015f;
+            // right turn
             } else if (axisDifference > 0 && Input.GetAxis("Horizontal") > 0|| Input.GetAxis("Horizontal") == 1f || _rightTouchBtn.Pressed)
             {
-                RDown = true;
-                /*
                 this.transform.Rotate(new Vector3(-1, 0, 0) * TSpeed);
                 _camera.transform.Rotate(new Vector3(0, 0, -1) * TSpeed);
-                TSpeed = OriTSpeed * 1.5f * Mathf.Abs(Input.GetAxis("Horizontal"));
-                */
+                TSpeed = TSpeed * 1.015f;
+            // no turn
             } else
             {
-                RDown = false;
-                LDown = false;
                 TSpeed = OriTSpeed;
             }
 
+
         }
 
+        // player is moving forward all the time
         this.transform.Translate(new Vector3(0, 0, 1) * Speed * Time.deltaTime * 60f);
-
-        
-		if (LDown&&!END) {
-			this.transform.Rotate(new Vector3 (1, 0, 0) * TSpeed);
-			_camera.transform.Rotate(new Vector3 (0, 0, 1) * TSpeed);
-			//float x=_camera.transform.eulerAngles.x;
-		//	float y=_camera.transform.eulerAngles.y;
-			//float z=_camera.transform.eulerAngles.z+1.0f;
-		//	Quaternion target=Quaternion.Euler(x,y,z);
-		//	StartCoroutine(WaitAndRotate(0.3f,new Vector3(0,0,1)));
-			TSpeed = TSpeed * 1.015f;
-		}
-		if (RDown&&!END) {
-			this.transform.Rotate(new Vector3 (-1, 0, 0) * TSpeed);
-			_camera.transform.Rotate(new Vector3 (0, 0, -1) * TSpeed);
-            //	float x=_camera.transform.eulerAngles.x;
-            //	float y=_camera.transform.eulerAngles.y;
-            //	float z=_camera.transform.eulerAngles.z-1.0f;
-            //	Quaternion target=Quaternion.Euler(x,y,z);
-            //_camera.transform.rotation=Quaternion.Slerp(_camera.transform.rotation,target,TSpeed*0.1f);
-            //StartCoroutine(WaitAndRotate(0.3f,new Vector3(0,0,-1)));
-            TSpeed = TSpeed * 1.015f;
-        }
         
     }
 	IEnumerator BackToOrigin(float waitTime)
@@ -117,7 +97,6 @@ public class AutoMove : MonoBehaviour {
 		ZoomIn = true;
 		ZoomOut = false;
         _C.GetComponent<UnityStandardAssets.ImageEffects.MotionBlur>().blurAmount = 0.08f;
-        //_camera.transform.rotation=Quaternion.Slerp(_camera.transform.rotation,target,TSpeed);
     }
 	void OnTriggerEnter(Collider col)
 	{
