@@ -6,9 +6,10 @@ public class SpritesAnimation : MonoBehaviour {
     public Sprite[] BG;
     public string _spriteFolderName = "level1_animation";
     public int _frameNumber = 45;
+    public int _frameRate = 12;
     public float Begin = 0f;
     private int i = 0;
-    private float counter = 1 / 12;
+    private float counter;
     //  private float Begin = 39.0f;
     
     private bool reverse;
@@ -16,6 +17,7 @@ public class SpritesAnimation : MonoBehaviour {
     void Start()
     {
         BG = Resources.LoadAll<Sprite>(_spriteFolderName);
+        counter = 1 / _frameRate;
     }
 
     // Update is called once per frame
@@ -39,7 +41,7 @@ public class SpritesAnimation : MonoBehaviour {
                     this.GetComponent<SpriteRenderer>().sprite = BG[i];
                     i--;
                 }
-                counter = 1 / 12;
+                counter = 1 / _frameRate;
 
                 if (i >= _frameNumber)
                 {

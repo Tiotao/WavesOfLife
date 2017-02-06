@@ -53,7 +53,7 @@ public class SpermGroupController : MonoBehaviour {
 		if (transform.childCount == 0) {
 			
 			DontDestroyOnLoad (GameObject.Find("Data"));
-			SceneManager.LoadScene ("Main");
+			SceneManager.LoadScene (SceneManager.GetActiveScene().name);
 		} else {
 			_isChecking = false;
 			_isDying = false;
