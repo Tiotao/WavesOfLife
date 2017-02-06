@@ -56,3 +56,5 @@ MonoBehaviour:
     type: 2}
   _BlackOverlay: {fileID: 0}
   _audio: {fileID: 0}
+  _maxInstanceScale: 0.3
+  _minInstanceScale: 0.3

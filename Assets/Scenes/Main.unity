@@ -1016,6 +1016,7 @@ MonoBehaviour:
   BG: []
   _spriteFolderName: BGanimation
   _frameNumber: 45
+  _frameRate: 12
   Begin: 39
 --- !u!1 &112687436
 GameObject:
@@ -8880,11 +8881,6 @@ Prefab:
       propertyPath: _audio
       value: 
       objectReference: {fileID: 136384033}
-    - target: {fileID: 114000012026085146, guid: 3d6d8b1c222642b43a5f2d0ce6c2bb35,
-        type: 2}
-      propertyPath: _initSpermAmount
-      value: 50
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3d6d8b1c222642b43a5f2d0ce6c2bb35, type: 2}
   m_IsPrefabParent: 0

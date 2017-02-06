@@ -37,13 +37,13 @@ public class SpermRandomMotion : MonoBehaviour {
         switch (position)
         {
             case 0:
-                randomTarget = new Vector3(Random.Range(-_moveRange * 2, _moveRange * 2), Random.Range(-_moveRange * 2, _moveRange * 2), Random.Range(-_moveRange * 2, 0f));
+                randomTarget = new Vector3(Random.Range(-_moveRange, _moveRange), Random.Range(-_moveRange * 2, _moveRange * 2), Random.Range(-_moveRange * 2, 0f));
                 break;
             case 1:
-                randomTarget = new Vector3(Random.Range(-_moveRange * 2, -_moveRange), Random.Range(-_moveRange * 2, _moveRange * 2), Random.Range(-_moveRange * 2, 0f));
+                randomTarget = new Vector3(Random.Range(-_moveRange, _moveRange), Random.Range(-_moveRange * 2, _moveRange * 2), Random.Range(-_moveRange * 2, 0f));
                 break;
             case 2:
-                randomTarget = new Vector3(Random.Range(_moveRange, _moveRange * 2), Random.Range(-_moveRange * 2, _moveRange * 2), Random.Range(-_moveRange * 2, 0f));
+                randomTarget = new Vector3(Random.Range(-_moveRange, _moveRange), Random.Range(-_moveRange * 2, _moveRange * 2), Random.Range(-_moveRange * 2, 0f));
                 break;
             default:
                 break;

@@ -2443,21 +2443,6 @@ Prefab:
       propertyPath: _audio
       value: 
       objectReference: {fileID: 676629712}
-    - target: {fileID: 114000012026085146, guid: 3d6d8b1c222642b43a5f2d0ce6c2bb35,
-        type: 2}
-      propertyPath: _initSpermAmount
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 1000011274599894, guid: 3d6d8b1c222642b43a5f2d0ce6c2bb35, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000012026085146, guid: 3d6d8b1c222642b43a5f2d0ce6c2bb35,
-        type: 2}
-      propertyPath: _SpermObject
-      value: 
-      objectReference: {fileID: 1000010096414036, guid: d413d304035e81a4e88a4ccea5d03202,
-        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3d6d8b1c222642b43a5f2d0ce6c2bb35, type: 2}
   m_IsPrefabParent: 0
@@ -6153,7 +6138,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 15
 --- !u!114 &1767928075
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6165,6 +6150,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6699c56d50eb2d043b00c7dc58f7c30f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bigfish: {fileID: 0}
 --- !u!1 &1770850310
 GameObject:
   m_ObjectHideFlags: 0

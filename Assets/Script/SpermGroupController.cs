@@ -16,6 +16,9 @@ public class SpermGroupController : MonoBehaviour {
 	float _fadingDuration = 1f;
 	float t = 0f;
 
+    public float _maxInstanceScale = 0.3f;
+    public float _minInstanceScale = 0.3f;
+
 	// Use this for initialization
 	void Start () {
         SpawnSperms(_initSpermAmount);
@@ -70,7 +73,9 @@ public class SpermGroupController : MonoBehaviour {
         {
             GameObject sperm = Instantiate(_SpermObject) as GameObject;
             sperm.transform.parent = transform;
-			sperm.transform.localPosition = new Vector3 (0, 0, 0);
+            float scale = Random.Range(_maxInstanceScale, _minInstanceScale);
+            sperm.transform.localPosition = new Vector3 (0, 0, 0);
+            sperm.transform.localScale = new Vector3(scale, scale, scale);
         }
 
     }
@@ -78,7 +83,6 @@ public class SpermGroupController : MonoBehaviour {
     void SpawnLastSperm()
     {
         GameObject sperm = Instantiate(_SpermObject) as GameObject;
-        Debug.Log(sperm);
         sperm.transform.parent = transform;
         sperm.transform.localPosition = new Vector3(0, 0, 0);
         sperm.transform.localScale = new Vector3(0.3f, 0.3f, 0.3f);
