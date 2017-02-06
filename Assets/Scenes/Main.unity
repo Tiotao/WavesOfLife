@@ -1947,6 +1947,7 @@ MonoBehaviour:
   _controllerCanvas: {fileID: 239599448}
   _leftTouchBtn: {fileID: 0}
   _rightTouchBtn: {fileID: 0}
+  MaxSpeed: 0.05
   END: 0
   _camera: {fileID: 23196569}
   _C: {fileID: 23196568}

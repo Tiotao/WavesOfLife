@@ -12,6 +12,7 @@ public class AutoMove : MonoBehaviour {
     public GameObject _controllerCanvas;
     public PointerListener _leftTouchBtn;
     public PointerListener _rightTouchBtn;
+    public float MaxSpeed;
 
     // game state
     public bool END = false;
@@ -50,7 +51,7 @@ public class AutoMove : MonoBehaviour {
 				ZoomIn = false;
 			}
 		}
-        if(Speed<=0.05f) {
+        if(Speed<= MaxSpeed) {
             Speed += (0.000025f * Time.deltaTime * 60f);
         }
 
