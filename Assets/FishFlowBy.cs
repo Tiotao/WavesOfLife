@@ -6,9 +6,10 @@ public class FishFlowBy : MonoBehaviour
     public bool Flow;
     public Sprite[] BG;
     private int i = 0;
-    private float counter = 1 / 12;
+    private float counter = 1/4 ;
     private float Begin = 0f;
     private bool reverse;
+    private float timer = 30.0f;
     // Use this for initialization
     void Start()
     {
@@ -20,7 +21,13 @@ public class FishFlowBy : MonoBehaviour
     {
         if (Flow)
         {
+            timer -= Time.deltaTime;
+            this.transform.parent = null;
             this.transform.Translate(new Vector3(0, 1, 0) * 0.04f * Time.deltaTime * 60f);
+            if(timer<=0)
+            {
+                this.gameObject.SetActive(false);
+            }
         }
     }
     void FixedUpdate()
@@ -43,7 +50,7 @@ public class FishFlowBy : MonoBehaviour
                         this.GetComponent<SpriteRenderer>().sprite = BG[i];
                         i--;
                     }
-                    counter = 1 / 12;
+                    counter = 1 /4;
 
                     if (i >= 45)
                     {
