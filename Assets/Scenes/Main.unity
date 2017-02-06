@@ -1010,10 +1010,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 93511825}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9809e03d569f8214dad111a5bc40dd45, type: 3}
+  m_Script: {fileID: 11500000, guid: 6b4e704266436fb47a6495e9d18da8b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   BG: []
+  _spriteFolderName: BGanimation
+  _frameNumber: 45
+  Begin: 39
 --- !u!1 &112687436
 GameObject:
   m_ObjectHideFlags: 0

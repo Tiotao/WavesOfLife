@@ -1141,10 +1141,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 237874940}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a2ce55f707d63c4880edc524cad044b, type: 3}
+  m_Script: {fileID: 11500000, guid: 6b4e704266436fb47a6495e9d18da8b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   BG: []
+  _spriteFolderName: level1_animation
+  _frameNumber: 45
 --- !u!1 &245046208 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1000011404711682, guid: b1db68a7132724f46bd6a7eea1cba12a,
@@ -6360,6 +6362,10 @@ Prefab:
     - target: {fileID: 1000010921017650, guid: 0fbbbaba079bd4b4b8c41e05c8054c3a, type: 2}
       propertyPath: m_Name
       value: OverlayCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000010921017650, guid: 0fbbbaba079bd4b4b8c41e05c8054c3a, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0fbbbaba079bd4b4b8c41e05c8054c3a, type: 2}
