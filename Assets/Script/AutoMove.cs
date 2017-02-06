@@ -16,6 +16,7 @@ public class AutoMove : MonoBehaviour {
 	public bool ZoomIn;
 	private float _V = 0;
 	public bool END=false;
+    public float _lastHorizontalAxis = 0;
 	AudioSource _audio;
 
     public GameObject _controllerCanvas;
@@ -33,6 +34,7 @@ public class AutoMove : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
+
 		if (ZoomOut) {
 			
 			_C.orthographicSize =  Mathf.SmoothDamp(_C.orthographicSize,9.0f,ref _V,0.5f);
@@ -53,7 +55,10 @@ public class AutoMove : MonoBehaviour {
         if (!END)
         {
 
-            if (Input.GetAxis("Horizontal") < 0 || _leftTouchBtn.Pressed)
+            float axisDifference = Input.GetAxis("Horizontal") - _lastHorizontalAxis;
+            _lastHorizontalAxis = Input.GetAxis("Horizontal");
+
+            if ((axisDifference < 0 && Input.GetAxis("Horizontal") < 0) || Input.GetAxis("Horizontal") == -1f || _leftTouchBtn.Pressed)
             {
                 LDown = true;
                 /*
@@ -61,7 +66,7 @@ public class AutoMove : MonoBehaviour {
                 _camera.transform.Rotate(new Vector3(0, 0, 1) * TSpeed);
                 TSpeed = OriTSpeed * 1.5f * Mathf.Abs(Input.GetAxis("Horizontal"));
                 */
-            } else if (Input.GetAxis("Horizontal") > 0 || _rightTouchBtn.Pressed)
+            } else if (axisDifference > 0 && Input.GetAxis("Horizontal") > 0|| Input.GetAxis("Horizontal") == 1f || _rightTouchBtn.Pressed)
             {
                 RDown = true;
                 /*
