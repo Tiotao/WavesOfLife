@@ -2302,8 +2302,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c2bdddec535642418ec5d4f210b6e07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Open: {fileID: 0}
-  Close: {fileID: 0}
+  Open: {fileID: 21300000, guid: a5e7a5cdd1676f046a6c1bc6b7a2fbd0, type: 3}
+  Close: {fileID: 21300000, guid: a4679150d8618c346a9a669e0e3e70be, type: 3}
 --- !u!135 &557273092
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -2311,10 +2311,10 @@ SphereCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 557273089}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 3.745163
+  m_Radius: 5.9149604
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &557273093
 Rigidbody:
@@ -2372,7 +2372,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: c2da3ad4003607b47becc280f8649ffa, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a4679150d8618c346a9a669e0e3e70be, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2958,8 +2958,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 969186601}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -15.74, y: 0.84, z: -0.757}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -15.48, y: 0.97, z: -0.757}
+  m_LocalScale: {x: 0.6640194, y: 0.66401917, z: 0.66401917}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 557273090}
