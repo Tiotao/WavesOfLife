@@ -23,7 +23,8 @@ public class FishFlowBy : MonoBehaviour
         {
             timer -= Time.deltaTime;
             this.transform.parent = null;
-            this.transform.Translate(new Vector3(0, 1, 0) * 0.06f * Time.deltaTime * 60f);
+            this.transform.Translate(new Vector3(0, 1, 0) * 0.07f * Time.deltaTime * 60f);
+     
             if(timer<=0)
             {
                 this.gameObject.SetActive(false);
