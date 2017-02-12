@@ -3,7 +3,7 @@ using System.Collections;
 
 public class GlowPointTrigger : MonoBehaviour {
 
-    public int _glowPathId;
+    public float _glowPathTime = 10f;
     public GlowPointController _controller;
 
 	void OnTriggerEnter(Collider other)

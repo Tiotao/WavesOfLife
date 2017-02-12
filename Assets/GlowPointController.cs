@@ -7,6 +7,7 @@ public class GlowPointController : MonoBehaviour {
     public GameObject _glowPaths;
     public GameObject _glowPoint;
     public List<Transform[]> _glowPathWayPoints;
+    public List<float> _glowPathTimes;
     public int _currentPath = 0;
     public bool _updatePath = true;
     public float _pathTime = 3f;
@@ -19,6 +20,7 @@ public class GlowPointController : MonoBehaviour {
         {
             Transform[] waypoints = GetComponentsInDirectChildren<Transform>(paths[i].gameObject);
             _glowPathWayPoints.Add(waypoints);
+            _glowPathTimes.Add(paths[i].gameObject.GetComponent<GlowPointTrigger>()._glowPathTime);
         }
         
         _glowPoint.transform.position = _glowPathWayPoints[0][0].position;
@@ -31,7 +33,7 @@ public class GlowPointController : MonoBehaviour {
        if (_updatePath)
         {
             Transform[] path = _glowPathWayPoints[_currentPath];
-            iTween.MoveTo(_glowPoint, iTween.Hash("path", path, "time", _pathTime, "easeType", iTween.EaseType.easeInOutSine));
+            iTween.MoveTo(_glowPoint, iTween.Hash("path", path, "time", _glowPathTimes[_currentPath], "easeType", iTween.EaseType.easeInOutSine));
             _updatePath = false;
         }
         
@@ -67,7 +69,7 @@ public class GlowPointController : MonoBehaviour {
             degree = Random.Range(0f, -180f);
             isClockwise = true;
         }
-        float changeTime = Random.Range(5f, 10f);
+        float changeTime = Random.Range(1.5f, 2f);
         iTween.RotateTo(_glowPoint, iTween.Hash("z", degree, "time", changeTime, "oncomplete", "RotateSprite", "oncompletetarget", gameObject, "oncompleteparams", isClockwise, "easetype", iTween.EaseType.easeInOutSine));
     }
 
