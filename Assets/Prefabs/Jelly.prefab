@@ -491,7 +491,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _DestroyEffect: {fileID: 0}
-  _DestroyEffectPrefab: {fileID: 1000010303824716, guid: 6d82195bd90b6d74280948ce73ac48cb,
+  _DestroyEffectPrefab: {fileID: 1000013083154488, guid: cc2f8651492b35c4f8924445bc0e53c1,
     type: 2}
   _DestroyEffectGroup: {fileID: 0}
   _EnemySound: {fileID: 0}
