@@ -11,10 +11,14 @@ public class GlowPointController : MonoBehaviour {
     public int _currentPath = 0;
     public bool _updatePath = true;
     public float _pathTime = 3f;
+    public GameObject _finalFish;
 
 	// Use this for initialization
 	void Start () {
+
+        
         Transform[] paths = GetComponentsInDirectChildren<Transform>(_glowPaths);
+        _finalFish = GameObject.Find("Final_Fish");
         _glowPathWayPoints = new List<Transform[]>();
         for (int i=0; i < paths.Length; i++)
         {
@@ -26,14 +30,26 @@ public class GlowPointController : MonoBehaviour {
         _glowPoint.transform.position = _glowPathWayPoints[0][0].position;
         ScaleSprite();
         RotateSprite();
+        iTween.FadeTo(_glowPoint.transform.Find("GlowPointSprite").gameObject, 0f, 0f);
+        iTween.FadeTo(_glowPoint.transform.Find("GlowPointSprite").gameObject, iTween.Hash("alpha", 1f, "time", 1f, "delay", 0.1f));
+
     }
-	
-	// Update is called once per frame
-	void Update () {
+
+    // Update is called once per frame
+    void Update () {
        if (_updatePath)
         {
             Transform[] path = _glowPathWayPoints[_currentPath];
-            iTween.MoveTo(_glowPoint, iTween.Hash("path", path, "time", _glowPathTimes[_currentPath], "easeType", iTween.EaseType.easeInOutSine));
+
+            if (_currentPath == _glowPathWayPoints.Count - 1)
+            {
+                iTween.MoveTo(_glowPoint, iTween.Hash("path", path, "time", _glowPathTimes[_currentPath], "easeType", iTween.EaseType.easeInOutSine, "oncomplete", "GoToFinalPosition", "oncompletetarget", gameObject));
+            } else
+            {
+                iTween.MoveTo(_glowPoint, iTween.Hash("path", path, "time", _glowPathTimes[_currentPath], "easeType", iTween.EaseType.easeInOutSine));
+            }
+
+            
             _updatePath = false;
         }
         
@@ -73,12 +89,26 @@ public class GlowPointController : MonoBehaviour {
         iTween.RotateTo(_glowPoint, iTween.Hash("z", degree, "time", changeTime, "oncomplete", "RotateSprite", "oncompletetarget", gameObject, "oncompleteparams", isClockwise, "easetype", iTween.EaseType.easeInOutSine));
     }
 
+    void GoToFinalPosition()
+    {
+        iTween.Stop();
+        iTween.RotateTo(_glowPoint, iTween.Hash("amount", new Vector3 (7.24f, 12.285f, -185.569f) , "time", 1f, "easetype", iTween.EaseType.easeInOutSine, "oncomplete", "AttachToFinalFish", "oncompletetarget", gameObject));
+    }
+
+    void AttachToFinalFish()
+    {
+
+        _glowPoint.transform.parent = _finalFish.transform;
+        
+    }
+
     public void NextStage()
     {
         _currentPath = _currentPath + 1;
         _updatePath = true;
 
     }
+
 
     public static T[] GetComponentsInDirectChildren<T>(GameObject gameObject)
     {
