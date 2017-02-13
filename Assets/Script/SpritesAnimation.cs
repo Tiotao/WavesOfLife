@@ -18,7 +18,7 @@ public class SpritesAnimation : MonoBehaviour {
     void Start()
     {
         BG = Resources.LoadAll<Sprite>(_spriteFolderName);
-        counter = 1 / _frameRate;
+        counter = 1f / _frameRate;
     }
 
     // Update is called once per frame
@@ -43,7 +43,7 @@ public class SpritesAnimation : MonoBehaviour {
                     this.GetComponent<SpriteRenderer>().sprite = BG[i];
                     i--;
                 }
-                counter = 1 / _frameRate;
+                counter = 1f / _frameRate;
 
                 if (i >= _frameNumber)
                 {
