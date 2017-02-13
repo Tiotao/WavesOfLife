@@ -3305,6 +3305,7 @@ MonoBehaviour:
   _player: {fileID: 1316519534}
   finalFish: {fileID: 973287283}
   Jelly: {fileID: 400911248}
+  _BlackOverlay: {fileID: 1841612188}
 --- !u!1 &465871460
 GameObject:
   m_ObjectHideFlags: 0
@@ -5583,7 +5584,6 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
-
 --- !u!1 &597002356
 GameObject:
   m_ObjectHideFlags: 0
@@ -5642,7 +5642,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1747572724}
   m_RootOrder: 0
-
 --- !u!1001 &628288723
 Prefab:
   m_ObjectHideFlags: 0
@@ -7161,8 +7160,8 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 1.5
-  m_Height: 20.48
+  m_Radius: 4.665705
+  m_Height: 24.8
   m_Direction: 2
   m_Center: {x: -2.05, y: 0, z: 0}
 --- !u!1 &987457295
@@ -7553,6 +7552,7 @@ Transform:
   - {fileID: 1961554718}
   - {fileID: 1381642475}
   - {fileID: 413160692}
+  - {fileID: 1747572724}
   m_Father: {fileID: 0}
   m_RootOrder: 5
 --- !u!1 &1046563033
@@ -11783,7 +11783,7 @@ Transform:
   m_Children:
   - {fileID: 613603425}
   m_Father: {fileID: 1041143755}
-  m_RootOrder: 52
+  m_RootOrder: 50
 --- !u!54 &1747572725
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -12461,7 +12461,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1000010921017650, guid: 0fbbbaba079bd4b4b8c41e05c8054c3a, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0fbbbaba079bd4b4b8c41e05c8054c3a, type: 2}

@@ -91,7 +91,7 @@ public class GlowPointController : MonoBehaviour {
 
     void GoToFinalPosition()
     {
-        iTween.Stop();
+        iTween.Stop(_glowPoint);
         iTween.RotateTo(_glowPoint, iTween.Hash("amount", new Vector3 (7.24f, 12.285f, -185.569f) , "time", 1f, "easetype", iTween.EaseType.easeInOutSine, "oncomplete", "AttachToFinalFish", "oncompletetarget", gameObject));
     }
 
