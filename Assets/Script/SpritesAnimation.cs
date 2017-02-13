@@ -10,6 +10,7 @@ public class SpritesAnimation : MonoBehaviour {
     public float Begin = 0f;
     private int i = 0;
     private float counter;
+    private bool set;
     //  private float Begin = 39.0f;
     
     private bool reverse;
@@ -27,6 +28,7 @@ public class SpritesAnimation : MonoBehaviour {
             Begin -= Time.deltaTime;
         if (Begin <= 0)
         {
+            
             counter -= Time.deltaTime;
             if (counter <= 0)
             {

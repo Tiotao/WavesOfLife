@@ -23,7 +23,7 @@ public class AutoMove : MonoBehaviour {
     public bool ZoomOut;
 	public bool ZoomIn;
     private float _V = 0;
-
+    public bool lvl1End=false;
     // sound effect
     private AudioSource _audio;
     
@@ -58,7 +58,7 @@ public class AutoMove : MonoBehaviour {
 
         // Obtain keyboard or touch input
 
-        if (!END)
+        if (!END&&!lvl1End)
         {
 
             // determine if keyboard value is increasing or decreasing
@@ -87,6 +87,7 @@ public class AutoMove : MonoBehaviour {
         }
 
         // player is moving forward all the time
+        if(!lvl1End)
         this.transform.Translate(new Vector3(0, 0, 1) * Speed * Time.deltaTime * 60f);
         
     }
