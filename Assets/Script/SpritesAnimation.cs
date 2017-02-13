@@ -24,8 +24,9 @@ public class SpritesAnimation : MonoBehaviour {
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (Begin > 0)
+        if (Begin > 0&& Begin<99)
             Begin -= Time.deltaTime;
+
         if (Begin <= 0)
         {
             
