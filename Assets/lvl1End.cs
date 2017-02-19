@@ -58,8 +58,8 @@ public class lvl1End : MonoBehaviour {
             finalFish.GetComponent<PlayAniDeadFish>().startplay = true;
             iTween.FadeTo(Jelly.transform.Find("GlowPointSprite").gameObject, 0f, 0.5f);
             // Jelly.SetActive(false);
-            finalFish.tag = "WALL";
-            Invoke("StartMove",2f);
+
+            Invoke("StartMove", 1f);
             StartCoroutine(StartFading());
         }
     }
@@ -71,6 +71,8 @@ public class lvl1End : MonoBehaviour {
     }
     private void StartMove()
     {
+        finalFish.GetComponent<CapsuleCollider>().enabled = false;
+        _player.GetComponentInChildren<SpermGroupController>().LeftOne();
         _player.GetComponent<AutoMove>().lvl1End = false;
     }
 }

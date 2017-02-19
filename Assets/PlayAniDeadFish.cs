@@ -4,6 +4,7 @@ using System.Collections;
 public class PlayAniDeadFish : MonoBehaviour
 {
     public Sprite[] BG;
+    public SpermGroupController _player;
     public string _spriteFolderName = "lvl1_deadfish";
     public int _frameNumber = 45;
     public int _frameRate = 6;
@@ -27,10 +28,10 @@ public class PlayAniDeadFish : MonoBehaviour
     }
     void FixedUpdate()
     {
-        if(startplay)
-        { 
-        if (Begin > 0)
-            Begin -= Time.deltaTime;
+        if (startplay)
+        {
+            if (Begin > 0)
+                Begin -= Time.deltaTime;
             if (Begin <= 0)
             {
                 if (!set)

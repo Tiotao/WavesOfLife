@@ -1953,6 +1953,7 @@ MonoBehaviour:
   _C: {fileID: 23196568}
   ZoomOut: 0
   ZoomIn: 0
+  lvl1End: 0
 --- !u!54 &218765211
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -8882,6 +8883,11 @@ Prefab:
       propertyPath: _audio
       value: 
       objectReference: {fileID: 136384033}
+    - target: {fileID: 114000012026085146, guid: 3d6d8b1c222642b43a5f2d0ce6c2bb35,
+        type: 2}
+      propertyPath: _levelNumber
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3d6d8b1c222642b43a5f2d0ce6c2bb35, type: 2}
   m_IsPrefabParent: 0

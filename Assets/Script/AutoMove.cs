@@ -88,7 +88,10 @@ public class AutoMove : MonoBehaviour {
 
         // player is moving forward all the time
         if(!lvl1End)
-        this.transform.Translate(new Vector3(0, 0, 1) * Speed * Time.deltaTime * 60f);
+        {
+            this.transform.Translate(new Vector3(0, 0, 1) * Speed * Time.deltaTime * 60f);
+        }
+            
         
     }
 	IEnumerator BackToOrigin(float waitTime)

@@ -32,8 +32,23 @@ public class SpermLife : MonoBehaviour
     {
         yield return new WaitForSeconds(1f);
         
+    }
 
-
+    public void Die()
+    {
+        if (!_isNameDisplayed)
+        {
+            _isNameDisplayed = true;
+            _DestroyEffect = Instantiate(_DestroyEffectPrefab, _DestroyEffectGroup.transform) as GameObject;
+            _DestroyEffect.transform.position = transform.position;
+            _DestroyEffect.GetComponent<ParticleSystem>().Emit(50);
+            if (!_EnemySound.isPlaying)
+            {
+                _EnemySound.Play();
+            }
+            Destroy(gameObject);
+        }
+        StartCoroutine(PauseEmission());
     }
 
 
@@ -41,20 +56,8 @@ public class SpermLife : MonoBehaviour
     {
         if (other.CompareTag("WALL"))
         {
-            if (!_isNameDisplayed)
-            {
-                _isNameDisplayed = true;
-                _DestroyEffect = Instantiate(_DestroyEffectPrefab, _DestroyEffectGroup.transform) as GameObject;
-                _DestroyEffect.transform.position = transform.position;
-                _DestroyEffect.GetComponent<ParticleSystem>().Emit(50);
-                if (!_EnemySound.isPlaying)
-                {
-                    _EnemySound.Play();
-                }
-                Destroy(gameObject);
-            }
-            StartCoroutine(PauseEmission());
 
+            Die();
         }
 
     }

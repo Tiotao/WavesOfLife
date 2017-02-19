@@ -9,10 +9,12 @@ public class SpermGroupController : MonoBehaviour {
     public GameObject _SpermObject;
 	public GameObject _BlackOverlay;
 	public AudioSource _audio;
+    public int _levelNumber = 0;
+
+    public bool _isDying = false;
+	public bool _isChecking = false;
+	public bool _isFading = false;
     
-	bool _isDying = false;
-	bool _isChecking = false;
-	bool _isFading = false;
 	float _fadingDuration = 1f;
 	float t = 0f;
 
@@ -40,7 +42,6 @@ public class SpermGroupController : MonoBehaviour {
 		{
 			t = t + Time.deltaTime;
 			float intensity = Mathf.Lerp(0f, 1f, t);
-			// _camera.GetComponent<Camera>
 			_BlackOverlay.GetComponent<Image>().color = new Color(0, 0, 0, intensity);
 			_audio.volume = 1f - intensity;
 		}
@@ -63,8 +64,6 @@ public class SpermGroupController : MonoBehaviour {
 		}
 
 
-
-
 	}
 
     void SpawnSperms(int spermAmount)
@@ -83,17 +82,30 @@ public class SpermGroupController : MonoBehaviour {
     void SpawnLastSperm()
     {
         GameObject sperm = Instantiate(_SpermObject) as GameObject;
+        Debug.Log(sperm);
+        
         sperm.transform.parent = transform;
+        Debug.Log(sperm.transform.parent.gameObject);
         sperm.transform.localPosition = new Vector3(0, 0, 0);
-        sperm.transform.localScale = new Vector3(0.3f, 0.3f, 0.3f);
-        sperm.transform.Find("Glow").localScale = new Vector3(1.5f, 1.5f, 1.5f);
-        sperm.transform.Find("Glow").GetComponent<SpriteRenderer>().color = new Color(1.0f, 1.0f, 1.0f, 1f);
-        sperm.transform.Find("SpermTail").GetComponent<TrailRenderer>().startWidth = 0.03f;
-        sperm.transform.Find("SpermTail").GetComponent<TrailRenderer>().time = 2f;
+        sperm.transform.localEulerAngles = new Vector3(0, 90, 90);
+
+        if (_levelNumber == 1)
+        {
+            sperm.transform.localScale = new Vector3(0.3f, 0.3f, 0.3f);
+            sperm.transform.Find("Glow").localScale = new Vector3(1.5f, 1.5f, 1.5f);
+            sperm.transform.Find("Glow").GetComponent<SpriteRenderer>().color = new Color(1.0f, 1.0f, 1.0f, 1f);
+            sperm.transform.Find("SpermTail").GetComponent<TrailRenderer>().startWidth = 0.03f;
+            sperm.transform.Find("SpermTail").GetComponent<TrailRenderer>().time = 2f;
+        }
+        
     }
 
     public void LeftOne()
     {
+        foreach (Transform child in transform)
+        {
+            child.gameObject.GetComponent<SpermLife>().Die();
+        }
         StartCoroutine(GenerateFinalSperm());  
     }
 
