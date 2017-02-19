@@ -82,10 +82,10 @@ public class SpermGroupController : MonoBehaviour {
     void SpawnLastSperm()
     {
         GameObject sperm = Instantiate(_SpermObject) as GameObject;
-        Debug.Log(sperm);
+    //    Debug.Log(sperm);
         
         sperm.transform.parent = transform;
-        Debug.Log(sperm.transform.parent.gameObject);
+     //   Debug.Log(sperm.transform.parent.gameObject);
         sperm.transform.localPosition = new Vector3(0, 0, 0);
         sperm.transform.localEulerAngles = new Vector3(0, 90, 90);
 
@@ -112,7 +112,7 @@ public class SpermGroupController : MonoBehaviour {
     IEnumerator GenerateFinalSperm()
     {
         yield return new WaitForSeconds(3f);
-        Debug.Log("yay");
+   //     Debug.Log("yay");
         SpawnLastSperm();
     }
 

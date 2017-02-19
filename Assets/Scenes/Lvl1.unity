@@ -2950,6 +2950,7 @@ GameObject:
   - 54: {fileID: 446427912}
   - 135: {fileID: 446427911}
   - 114: {fileID: 446427914}
+  - 114: {fileID: 446427915}
   m_Layer: 0
   m_Name: EndTrigger
   m_TagString: Untagged
@@ -3012,6 +3013,21 @@ MonoBehaviour:
   finalFish: {fileID: 973287283}
   Jelly: {fileID: 400911248}
   _BlackOverlay: {fileID: 1841612188}
+--- !u!114 &446427915
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 446427910}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfe6a6869d263d54aae6e5af9cb6afcc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Light: {fileID: 898428165}
+  _camera: {fileID: 83635655}
+  _Time: 12
+  _Map: {fileID: 85289062}
 --- !u!43 &519205420
 Mesh:
   m_ObjectHideFlags: 0
@@ -6070,7 +6086,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: -1
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 939bf436d3b0c9f4daf7c243e40075a8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -10377,7 +10393,8 @@ Transform:
   m_LocalPosition: {x: -11.99, y: 7.229, z: 1.264}
   m_LocalScale: {x: 0.5000063, y: -5.920098, z: 4.598669}
   m_LocalEulerAnglesHint: {x: 450.8, y: -152.648, z: 26.605988}
-  m_Children: []
+  m_Children:
+  - {fileID: 663696667}
   m_Father: {fileID: 1041143755}
   m_RootOrder: 43
 --- !u!54 &1663809533

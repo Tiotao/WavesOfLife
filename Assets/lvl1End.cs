@@ -60,7 +60,9 @@ public class lvl1End : MonoBehaviour {
             // Jelly.SetActive(false);
 
             Invoke("StartMove", 1f);
+            Invoke("DeleteFish", 4f);
             StartCoroutine(StartFading());
+            Invoke("StartEndingAni", 4f);
         }
     }
 
@@ -74,5 +76,15 @@ public class lvl1End : MonoBehaviour {
         finalFish.GetComponent<CapsuleCollider>().enabled = false;
         _player.GetComponentInChildren<SpermGroupController>().LeftOne();
         _player.GetComponent<AutoMove>().lvl1End = false;
+        _player.GetComponent<AutoMove>().END = true;
+
+    }
+    private void DeleteFish()
+    {
+        finalFish.SetActive(false);
+    }
+    private void StartEndingAni()
+    {
+        this.GetComponent<Lvl1EndingAnimation>().enabled = true;
     }
 }
