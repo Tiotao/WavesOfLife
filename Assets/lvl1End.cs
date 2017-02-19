@@ -59,13 +59,18 @@ public class lvl1End : MonoBehaviour {
             iTween.FadeTo(Jelly.transform.Find("GlowPointSprite").gameObject, 0f, 0.5f);
             // Jelly.SetActive(false);
             finalFish.tag = "WALL";
+            Invoke("StartMove",2f);
             StartCoroutine(StartFading());
         }
     }
 
     IEnumerator StartFading()
     {
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(3f);
         _isFading = true;
+    }
+    private void StartMove()
+    {
+        _player.GetComponent<AutoMove>().lvl1End = false;
     }
 }
