@@ -9,12 +9,15 @@ public class Begin : MonoBehaviour {
 	public GameObject _WhiteOverlay;
 	bool _isFading = false;
 	AudioSource _audio;
+    public AsyncSceneLoader _AsyncSceneLoader;
 
 
-	// Use this for initialization
-	void Start () {
+
+    // Use this for initialization
+    void Start () {
 		_audio = GameObject.Find ("BackgroundSound").GetComponent<AudioSource> ();
-	}
+        
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -28,17 +31,18 @@ public class Begin : MonoBehaviour {
 		}
 	}
 
-	IEnumerator LoadNextScene() {
+	IEnumerator GoToNextScene() {
 		yield return new WaitForSeconds (3f);
-		SceneManager.LoadScene("Main");
-	}
+        _AsyncSceneLoader.ToNextScene();
+        // SceneManager.LoadScene("Lvl1");
+    }
 
 	void OnTriggerEnter(Collider col)
 	{
 		if (col.CompareTag ("Player")) {
 			_WhiteOverlay.SetActive (true);
 			_isFading = true;
-			StartCoroutine(LoadNextScene ());
+			StartCoroutine(GoToNextScene());
             //Debug.Log ("BeginGame");
 		}
 	}
