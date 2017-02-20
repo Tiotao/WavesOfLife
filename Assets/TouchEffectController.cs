@@ -19,17 +19,18 @@ public class TouchEffectController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        
-        if (Input.GetMouseButton(0))
-        {
-            _TouchTrace.transform.position = Input.mousePosition;
-            _targetAlpha = 1.0f;
 
-        }
-        
-        if (Input.GetMouseButtonUp(0))
-        {
-            _targetAlpha = 0.0f;
+        if (Input.touchCount == 1)
+        { //Does finger count on screen equal 1?
+            if (Input.GetTouch(0).phase == TouchPhase.Began)
+            { //When touch on the touch screen begins.
+                _TouchTrace.transform.position = Input.GetTouch(0).position;
+                _targetAlpha = 1.0f;
+            }
+            if (Input.GetTouch(0).phase == TouchPhase.Ended)
+            { //When touch on the touch screen ends.
+                _targetAlpha = 0.0f;
+            }
         }
 
         Color curColor = _TraceImage.color;
@@ -41,21 +42,9 @@ public class TouchEffectController : MonoBehaviour {
             _TraceImage.color = curColor;
         }
 
-        /**
-        if (Input.touchCount == 1)
-        { //Does finger count on screen equal 1?
-            if (Input.GetTouch(0).phase == TouchPhase.Began && _TouchTrace == null)
-            { //When touch on the touch screen begins.
-                Vector2 fTC = Input.GetTouch(0).position;
-                _TouchTrace.transform.position = fTC;
-                iTween.FadeTo(_TouchTrace, 1f, 0.2f);
-            }
-            if (Input.GetTouch(0).phase == TouchPhase.Ended && _TouchTrace != null)
-            { //When touch on the touch screen ends.
-                iTween.FadeTo(_TouchTrace, 0f, 0.2f);
-            }
-        }
-    **/
+        
+        
+    
     }
     
     void HandleTouch(Touch t)
