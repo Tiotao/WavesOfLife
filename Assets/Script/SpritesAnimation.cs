@@ -11,6 +11,8 @@ public class SpritesAnimation : MonoBehaviour {
     private int i = 0;
     private float counter;
     private bool set;
+    public float Speed;
+    private  float timer=0;
     //  private float Begin = 39.0f;
     
     private bool reverse;
@@ -29,7 +31,15 @@ public class SpritesAnimation : MonoBehaviour {
 
         if (Begin <= 0)
         {
-            
+            if (Speed != 0)
+            {
+                timer += Time.deltaTime;
+                this.gameObject.transform.Translate(new Vector3(0, 1, 0) * Speed * Time.deltaTime * 60f);
+                if(timer>=11f)
+                {
+                    Speed = 0;
+                }
+            }
             counter -= Time.deltaTime;
             if (counter <= 0)
             {

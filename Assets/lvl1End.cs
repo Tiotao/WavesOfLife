@@ -62,13 +62,14 @@ public class lvl1End : MonoBehaviour {
             Invoke("StartMove", 1f);
             Invoke("DeleteFish", 4f);
             StartCoroutine(StartFading());
-            Invoke("StartEndingAni", 4f);
+           
         }
     }
 
     IEnumerator StartFading()
     {
         yield return new WaitForSeconds(3f);
+        Invoke("StartEndingAni", 2f);
         _isFading = true;
     }
     private void StartMove()
