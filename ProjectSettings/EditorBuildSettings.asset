@@ -11,7 +11,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Main.unity
   - enabled: 0
     path: Assets/Scenes/End.unity
-  - enabled: 0
-    path: Assets/Scenes/Lvl1.unity
   - enabled: 1
+    path: Assets/Scenes/Lvl1.unity
+  - enabled: 0
     path: Assets/Scenes/Lvl2.unity
