@@ -25,7 +25,7 @@ public class TouchEffectController : MonoBehaviour {
             if (Input.GetTouch(0).phase == TouchPhase.Began)
             { //When touch on the touch screen begins.
                 _TouchTrace.transform.position = Input.GetTouch(0).position;
-                _targetAlpha = 1.0f;
+                _targetAlpha = 0.5f;
             }
             if (Input.GetTouch(0).phase == TouchPhase.Ended)
             { //When touch on the touch screen ends.
