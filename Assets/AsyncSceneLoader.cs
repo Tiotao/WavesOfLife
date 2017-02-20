@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 public class AsyncSceneLoader : MonoBehaviour {
 
     AsyncOperation a;
+    public GameObject _LoadingImage;
 
     // Use this for initialization
     void Start () {
@@ -19,6 +20,7 @@ public class AsyncSceneLoader : MonoBehaviour {
 
     public void ToNextScene()
     {
+        _LoadingImage.SetActive(true);
         a.allowSceneActivation = true;
     }
 }

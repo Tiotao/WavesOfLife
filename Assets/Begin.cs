@@ -10,6 +10,7 @@ public class Begin : MonoBehaviour {
 	bool _isFading = false;
 	AudioSource _audio;
     public AsyncSceneLoader _AsyncSceneLoader;
+    
 
 
 
@@ -33,6 +34,7 @@ public class Begin : MonoBehaviour {
 
 	IEnumerator GoToNextScene() {
 		yield return new WaitForSeconds (3f);
+        
         _AsyncSceneLoader.ToNextScene();
         // SceneManager.LoadScene("Lvl1");
     }
