@@ -54,7 +54,7 @@ public class SpermLife : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("WALL"))
+        if (other.CompareTag("WALL")||other.CompareTag("BUGS"))
         {
 
             Die();

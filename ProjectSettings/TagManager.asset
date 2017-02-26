@@ -8,6 +8,8 @@ TagManager:
   - SPEED1
   - WALL
   - DATA
+  - BUGS
+  - BUGSDELETE
   layers:
   - Default
   - TransparentFX
