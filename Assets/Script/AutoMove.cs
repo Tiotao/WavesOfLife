@@ -3,7 +3,8 @@ using System.Collections;
 using UnityStandardAssets.ImageEffects;
 
 public class AutoMove : MonoBehaviour {
-
+    //player state
+    public bool HasSpeedUp;
     // game control
     public float Speed;
 	public float TSpeed;	
@@ -98,9 +99,10 @@ public class AutoMove : MonoBehaviour {
 	{
 		yield return new WaitForSeconds (waitTime);
         _C.GetComponent<UnityStandardAssets.ImageEffects.MotionBlur>().enabled = false;
-		Speed =0.05f;
+		Speed =MaxSpeed;
 		ZoomIn = true;
 		ZoomOut = false;
+        HasSpeedUp = false;
         _C.GetComponent<UnityStandardAssets.ImageEffects.MotionBlur>().blurAmount = 0.08f;
     }
 	void OnTriggerEnter(Collider col)
@@ -108,23 +110,25 @@ public class AutoMove : MonoBehaviour {
 		if(col.CompareTag("SPEED"))
 		{
 			_audio.Play ();
-			Speed =0.15f;
+			Speed =0.1f;
 			ZoomOut = true;
             //  UnityStandardAssets.ImageEffects.
             _C.GetComponent<UnityStandardAssets.ImageEffects.MotionBlur>().enabled = true;
             _C.GetComponent<UnityStandardAssets.ImageEffects.MotionBlur>().blurAmount = 0.9f;
-			StartCoroutine(BackToOrigin(2.2f));
+            HasSpeedUp = true;
+            StartCoroutine(BackToOrigin(2.2f));
 
 
 			}
         if (col.CompareTag("SPEED1")) {
 			_audio.Play ();
-            Speed = 0.15f;
+            Speed = 0.5f;
             ZoomOut = true;
+            HasSpeedUp = true;
             //  UnityStandardAssets.ImageEffects.
             _C.GetComponent<UnityStandardAssets.ImageEffects.MotionBlur>().enabled = true;
             _C.GetComponent<UnityStandardAssets.ImageEffects.MotionBlur>().blurAmount = 0.9f;
-            StartCoroutine(BackToOrigin(1.5f));
+            StartCoroutine(BackToOrigin(0.3f));
 
 
         }
