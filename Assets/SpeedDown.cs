@@ -5,6 +5,7 @@ using UnityEngine;
 public class SpeedDown : MonoBehaviour {
     public GameObject[] BugGenerators;
     public GameObject[] Bugs;
+    public GameObject BGanimation;
     // Use this for initialization
     void Start () {
 		
@@ -26,8 +27,9 @@ public class SpeedDown : MonoBehaviour {
            Bugs = GameObject.FindGameObjectsWithTag("BUGS");
             for (int i = 0; i < Bugs.Length; i++)
             {
-                Bugs[i].GetComponent<BugsAutoMove>().TimeStop = true;
+                Bugs[i].GetComponent<BugsAutoMove>().Speed = 0.008f;
             }
+            BGanimation.GetComponent<SpritesAnimation>().Begin = 100f;
             Invoke("TimeContinue",8.0f);
         }
     }
@@ -38,10 +40,8 @@ public class SpeedDown : MonoBehaviour {
         {
             BugGenerators[i].GetComponent<BugGenerator>().StopTime = false;
         }
-        for (int i = 0; i < Bugs.Length; i++)
-        {
-            Bugs[i].GetComponent<BugsAutoMove>().TimeStop = false;
-        }
+        BGanimation.GetComponent<SpritesAnimation>().Begin = -1;
+        this.GetComponentInChildren<Zoomin>().Zoom_out(7f);
     }
 
 }
