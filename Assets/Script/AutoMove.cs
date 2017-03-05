@@ -132,6 +132,9 @@ public class AutoMove : MonoBehaviour {
 
 
         }
+
+       
+        
     }
 }
 

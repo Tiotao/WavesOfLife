@@ -16,10 +16,10 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 4000013540241378}
-  - 212: {fileID: 212000011598239082}
+  - component: {fileID: 4000013540241378}
+  - component: {fileID: 212000011598239082}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -32,14 +32,14 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 4000010889847074}
-  - 33: {fileID: 33000012537323874}
-  - 65: {fileID: 65000011900019104}
-  - 23: {fileID: 23000013746253372}
-  - 54: {fileID: 54000013176342824}
-  - 114: {fileID: 114000012586943248}
+  - component: {fileID: 4000010889847074}
+  - component: {fileID: 33000012537323874}
+  - component: {fileID: 65000011900019104}
+  - component: {fileID: 23000013746253372}
+  - component: {fileID: 54000013176342824}
+  - component: {fileID: 114000012586943248}
   m_Layer: 0
   m_Name: Bugs
   m_TagString: BUGS
@@ -56,11 +56,11 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 24.997, y: 7.102, z: -0.25}
   m_LocalScale: {x: 1, y: 1, z: 1.3246524}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 4000013540241378}
   m_Father: {fileID: 0}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4000013540241378
 Transform:
   m_ObjectHideFlags: 1
@@ -70,10 +70,10 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 4000010889847074}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &23000013746253372
 MeshRenderer:
   m_ObjectHideFlags: 1
@@ -88,7 +88,9 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  m_SubsetIndices: 
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
@@ -96,7 +98,7 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_SelectedWireframeHidden: 0
+  m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -153,6 +155,7 @@ MonoBehaviour:
   P1: {fileID: 21300000, guid: ff9321f4f61cff649b37a19ca5bc77d7, type: 3}
   P2: {fileID: 21300000, guid: 3b9877b9a02f32d4fbc6f17377d6fc24, type: 3}
   P3: {fileID: 21300000, guid: b3eb2da7e7b0bb14881faee5c1b8024f, type: 3}
+  _sprite: {fileID: 1000010212065584}
 --- !u!212 &212000011598239082
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -167,7 +170,9 @@ SpriteRenderer:
   m_ReflectionProbeUsage: 0
   m_Materials:
   - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_SubsetIndices: 
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
@@ -175,7 +180,7 @@ SpriteRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_SelectedWireframeHidden: 1
+  m_SelectedEditorRenderState: 0
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
