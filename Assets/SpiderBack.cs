@@ -23,9 +23,21 @@ public class SpiderBack : MonoBehaviour {
             }
             else
             {
-                Spider.GetComponent<Animator>().SetTrigger("TrigSpider");
-                Spider.GetComponent<SpiderStatus>().IsActive = true;
+                if (!GameObject.FindGameObjectWithTag("Player").GetComponent<AutoMove>().HasSpeedUp)
+                {
+                    Spider.GetComponent<Animator>().SetTrigger("TrigSpider");
+                    Spider.GetComponent<SpiderStatus>().IsActive = true;
+                }
+                else
+                {
+                    Invoke("triggerAnimation", 1.0f);
+                }
             }
         }
+    }
+    private void triggerAnimation()
+    {
+        Spider.GetComponent<Animator>().SetTrigger("TrigSpider");
+        Spider.GetComponent<SpiderStatus>().IsActive = true;
     }
 }
