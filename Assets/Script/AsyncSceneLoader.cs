@@ -27,13 +27,13 @@ public class AsyncSceneLoader : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if(a != null && a.progress >= 0.9f) {
-            _isAllowingFade = true;
-        }
+        // if(a != null && a.progress >= 0.9f) {
+        //     _isAllowingFade = true;
+        // }
 
-        if (_isAllowingFade && !_isFading) {
-            StartCoroutine(FadeToBlack());
-        }
+        // if (_isAllowingFade && !_isFading) {
+        //     StartCoroutine(FadeToBlack());
+        // }
 
         if (_isFading && t <= _effectDuration)
 		{
@@ -50,13 +50,12 @@ public class AsyncSceneLoader : MonoBehaviour {
         _BlackOverlay.SetActive(true);
         yield return new WaitForSeconds (_effectDuration);
         a.allowSceneActivation = true;
-
     }
 
     public void ToSelectedScene(int sceneIndex) {
         _SceneSelectionCanvas.SetActive(false);
         a = SceneManager.LoadSceneAsync(sceneIndex);
-        a.allowSceneActivation = false;
+        a.allowSceneActivation = true;
         _LoadingImage.SetActive(true);
         
     }
