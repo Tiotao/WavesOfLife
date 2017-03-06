@@ -7,7 +7,7 @@ public class Begin : MonoBehaviour {
 	public GameObject _Camera;
 	public bool _toSceneSelection = false;
 	
-	Vector3 _targetCamPosition = new Vector3(19.14f, -17.29f, -2.58f);
+	Vector3 _targetCamPosition = new Vector3(19.7f, -18f, -2.58f);
 	Vector3 _targetCamRotation = new Vector3(0f, 0f, -90f);
 
     // Use this for initialization

@@ -9,6 +9,7 @@ public class UIManager : MonoBehaviour {
 	public GameObject _player;
 	public AudioSource _buttonSound;
     public GameObject _TouchController;
+	public GameObject _Hint;
 	// Use this for initialization
 	void Start () {
 		_Button = GetComponentInChildren<Button> ();
@@ -27,8 +28,10 @@ public class UIManager : MonoBehaviour {
 	void TaskOnClick()
 	{
 		Data.GetComponent<data> ().Name ="";
+		_player.SetActive(true);
 		_player.GetComponent<AutoMove>().enabled = true;
         _TouchController.SetActive(true);
+		_Hint.SetActive(true);
         DontDestroyOnLoad (Data);
 		this.gameObject.SetActive (false);
 		if (!_buttonSound.isPlaying) {
