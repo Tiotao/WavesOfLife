@@ -6,11 +6,14 @@ public class FadeInWhenBeginning : MonoBehaviour {
 
 	float t = 0f;
 	bool _isFading = false;
+
+	bool _isFadingIn = true;
 	public float _effectDuration = 1f;
 
 	// Use this for initialization
 	void Start () {
-		StartCoroutine(StartFading ());
+		FadeIn(_effectDuration, 0f);
+		//StartCoroutine(StartFading (_effectDuration, 2f, true));
 	}
 	
 	// Update is called once per frame
@@ -18,14 +21,34 @@ public class FadeInWhenBeginning : MonoBehaviour {
 		if (_isFading && t <= _effectDuration)
 		{
 			t = t + Time.deltaTime;
-			float intensity = Mathf.Lerp(1f, 0f, t);
+			float intensity;
+			if (_isFadingIn) {
+				intensity = Mathf.Lerp(1f, 0f, t);
+			} else {
+				intensity = Mathf.Lerp(0f, 1f, t);
+			}
 			// _camera.GetComponent<Camera>
 			gameObject.GetComponent<Image>().color = new Color(0, 0, 0, intensity);
+		} else {
+			_isFading = false;
+			t = 0;
 		}
 	}
 
-	IEnumerator StartFading() {
-		yield return new WaitForSeconds (2f);
+	IEnumerator StartFading(float duration, float delay, bool isFadingIn) {
+		yield return new WaitForSeconds (delay);
+		_isFadingIn = isFadingIn;
+		_effectDuration = duration;
 		_isFading = true;
 	}
+
+	public void FadeOut(float duration, float delay) {
+		StartCoroutine(StartFading(duration, delay, false));
+	}
+
+	public void FadeIn(float duration, float delay) {
+		StartCoroutine(StartFading(duration, delay, true));
+	}
+
+	 
 }

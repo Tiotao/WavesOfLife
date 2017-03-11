@@ -10,6 +10,10 @@ public class Lvl1EndingAnimation : MonoBehaviour {
     public GameObject Mask;
     public GameObject Glow;
     public GameObject[] FlowBugs;
+
+    public FadeInWhenBeginning _BlackOverlay;
+
+    bool _startFading = false;
 	// Use this for initialization
 	void Start () {
         _Map.SetActive(false);
@@ -27,6 +31,10 @@ public class Lvl1EndingAnimation : MonoBehaviour {
         timer +=Time.deltaTime;
         if(timer>=_Time)
         {
+            if (!_startFading) {
+                _startFading = true;
+                _BlackOverlay.FadeOut(2f, 2f);
+            }
             _camera.GetComponent<CameraFollow>().enabled = false;
         }
 	}

@@ -3240,6 +3240,7 @@ MonoBehaviour:
   - {fileID: 182317314}
   - {fileID: 1096751753}
   - {fileID: 1677059263}
+  _BlackOverlay: {fileID: 1841612189}
 --- !u!43 &519205420
 Mesh:
   m_ObjectHideFlags: 0
@@ -6568,7 +6569,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 2abf1e1f1a1626a439a1025840fcf0bf, type: 3}
+  m_audioClip: {fileID: 8300000, guid: c731dafa97742b54d86613f94329b788, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -9655,6 +9656,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81cc433a01842694988fe5e95d1377ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  HasSpeedUp: 0
   Speed: 0.005
   TSpeed: 1
   _lastHorizontalAxis: 0
@@ -11219,7 +11221,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 1111302376
+  randomSeed: 1111302400
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -13804,7 +13806,7 @@ ParticleSystemRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_SelectedEditorRenderState: 3
+  m_SelectedEditorRenderState: 0
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -15349,6 +15351,12 @@ GameObject:
   m_PrefabParentObject: {fileID: 1000013171542366, guid: 0fbbbaba079bd4b4b8c41e05c8054c3a,
     type: 2}
   m_PrefabInternal: {fileID: 1841612187}
+--- !u!114 &1841612189 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114000011083482176, guid: 0fbbbaba079bd4b4b8c41e05c8054c3a,
+    type: 2}
+  m_PrefabInternal: {fileID: 1841612187}
+  m_Script: {fileID: 11500000, guid: e18939e7e967e9e4a9ba3b324b27a189, type: 3}
 --- !u!1 &1883557279
 GameObject:
   m_ObjectHideFlags: 0
