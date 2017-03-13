@@ -21,8 +21,7 @@ public class AsyncSceneLoader : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        
-        _audio = GameObject.Find ("BackgroundSound").GetComponent<AudioSource> ();
+        _audio = GameObject.Find ("BackgroundMusic").GetComponent<AudioSource> ();
     }
 	
 	// Update is called once per frame

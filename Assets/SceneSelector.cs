@@ -20,12 +20,15 @@ public class SceneSelector : MonoBehaviour {
         List<Level> levels = LevelAccess.LoadLevels();
 
         foreach(Level l in levels) {
-            
+            int levelIndex = int.Parse(l.ID);
             if (l.Unlocked) {
-                int levelIndex = int.Parse(l.ID);
                 int _sceneIndex = levelIndex + _sceneIndexOffset;
                 _SceneBtns[levelIndex].gameObject.GetComponent<Image>().sprite = _SceneUnlockBtnsSprite[levelIndex];
                 _SceneBtns[levelIndex].onClick.AddListener(delegate () { LoadScene(_sceneIndex); });
+                iTween.ScaleBy(_SceneBtns[levelIndex].gameObject, new Vector3(1.5f, 1.5f, 1.5f), 1f);
+                ScaleUp(_SceneBtns[levelIndex].gameObject);
+            } else {
+                iTween.ScaleBy(_SceneBtns[levelIndex].gameObject, new Vector3(0.5f, 0.5f, 0.5f), 1f);
             }
         }
         //SetLevel("1", true);
@@ -41,6 +44,16 @@ public class SceneSelector : MonoBehaviour {
 		
 		_AsyncSceneLoader.ToSelectedScene(sceneIndex);
 	}
+
+    void ScaleUp(GameObject obj) {
+		iTween.ScaleAdd(obj, iTween.Hash("amount", new Vector3(0.2f, 0.2f, 0.2f), "oncompletetarget", gameObject, "oncomplete", "ScaleDown", "delay", Random.Range(0, 5), "time", Random.Range(10, 20), "oncompleteparams", obj, "easetype", iTween.EaseType.linear));
+
+    }
+
+    void ScaleDown(GameObject obj) {
+		iTween.ScaleAdd(obj, iTween.Hash("amount", new Vector3(-0.2f, -0.2f, -0.2f), "oncompletetarget", gameObject, "oncomplete", "ScaleUp", "delay", Random.Range(0, 5), "time", Random.Range(10, 20), "oncompleteparams", obj, "easetype", iTween.EaseType.linear));
+
+    }
 
 	IEnumerator GoToSelectedScene(int sceneIndex) {
 		yield return new WaitForSeconds (3f);

@@ -9,6 +9,8 @@ public class ContactEggEffect : MonoBehaviour {
     public GameObject _WhiteOverylay;
 	public GameObject _BackgroundMusic;
     public float _effectDuration;
+
+	public AsyncSceneLoader _AsyncSceneLoader;
     float _currentExposure;
     float _targetExposure;
 	AudioSource _audio;
@@ -59,7 +61,8 @@ public class ContactEggEffect : MonoBehaviour {
 	}
 	void ChangeScene()
 	{
-		DontDestroyOnLoad (_BackgroundMusic);
-		SceneManager.LoadScene ("End");
+		_AsyncSceneLoader.ToSelectedScene(0);
+		// DontDestroyOnLoad (_BackgroundMusic);
+		// SceneManager.LoadScene ("End");
 	}
 }

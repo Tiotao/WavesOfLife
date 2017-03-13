@@ -1311,7 +1311,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: b26f054211902b24da3483295fbd9780, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3dff570390719334abb2d5086527c437, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1417,7 +1417,7 @@ GameObject:
   - component: {fileID: 643585931}
   - component: {fileID: 643585930}
   m_Layer: 0
-  m_Name: BackgroundSound
+  m_Name: BackgroundMusic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3210,7 +3210,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: b0bf07fa994fd41489c91b8cb8041b9b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 43ce893709bc02a4587477f07b3d36b4, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3402,7 +3402,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 224161381ea392e45bf597918c5c890f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 547a1b62cf48b834c886cb3e79307b21, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3746,11 +3746,10 @@ MonoBehaviour:
   - {fileID: 1800912458}
   - {fileID: 608664272}
   _SceneUnlockBtnsSprite:
-  - {fileID: 21300000, guid: b0bf07fa994fd41489c91b8cb8041b9b, type: 3}
-  - {fileID: 21300000, guid: 340a1f21a1993604f8e8f9bce0c9fef8, type: 3}
-  - {fileID: 21300000, guid: 22589ffe8f3cd9240ac3ec1642f26882, type: 3}
+  - {fileID: 21300000, guid: 43ce893709bc02a4587477f07b3d36b4, type: 3}
+  - {fileID: 21300000, guid: 3f5bc2de46a0d5648bb9a27ae1cd7eed, type: 3}
+  - {fileID: 21300000, guid: 46f7de236197c1c44844af76747c2550, type: 3}
   _AsyncSceneLoader: {fileID: 1826283685}
-  _maxLevel: 2
 --- !u!1 &2088155153
 GameObject:
   m_ObjectHideFlags: 0

@@ -12,12 +12,14 @@ public class GetText : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		Data = GameObject.FindGameObjectWithTag ("DATA");
-		if (Data) {
-			this.GetComponent<Text> ().text = "Welcome to this world, " + Data.GetComponent<data> ().Name;
-		} else {
-			this.GetComponent<Text> ().text = "Welcome to this world, Stranger.";
-		}
+		// Data = GameObject.FindGameObjectWithTag ("DATA");
+		// if (Data) {
+		// 	this.GetComponent<Text> ().text = "Welcome to this world, " + Data.GetComponent<data> ().Name;
+		// } else {
+		// 	this.GetComponent<Text> ().text = "Welcome to this world, Stranger.";
+		// }
+
+		this.GetComponent<Text> ().text = "Welcome to this world, Stranger.";
 
 		_isBrightenUp = true;
 	}
