@@ -32,7 +32,7 @@ public class AutoMove : MonoBehaviour {
     void Start () {
 		OriTSpeed = TSpeed;
 		_audio = GetComponent<AudioSource> ();
-        Cursor.visible = false;
+        Cursor.visible = true;
         _leftTouchBtn = _controllerCanvas.GetComponentsInChildren<PointerListener>()[0];
         _rightTouchBtn = _controllerCanvas.GetComponentsInChildren<PointerListener>()[1];
     }

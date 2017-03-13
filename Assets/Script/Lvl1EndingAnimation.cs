@@ -13,6 +13,8 @@ public class Lvl1EndingAnimation : MonoBehaviour {
 
     public FadeInWhenBeginning _BlackOverlay;
 
+    public AsyncSceneLoader _AsyncSceneLoader;
+
     bool _startFading = false;
 	// Use this for initialization
 	void Start () {
@@ -24,6 +26,7 @@ public class Lvl1EndingAnimation : MonoBehaviour {
         {
             FlowBugs[i].GetComponent<FlowBugsMove>().BeginMove = true;
         }
+        LevelAccess.SetLevel("1", true);
     }
 	
 	// Update is called once per frame
@@ -35,6 +38,7 @@ public class Lvl1EndingAnimation : MonoBehaviour {
                 _startFading = true;
                 _BlackOverlay.FadeOut(2f, 2f);
             }
+            _AsyncSceneLoader.ToSelectedScene(2);
             _camera.GetComponent<CameraFollow>().enabled = false;
         }
 	}

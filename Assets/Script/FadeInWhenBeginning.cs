@@ -10,6 +10,8 @@ public class FadeInWhenBeginning : MonoBehaviour {
 	bool _isFadingIn = true;
 	public float _effectDuration = 1f;
 
+	
+
 	// Use this for initialization
 	void Start () {
 		FadeIn(_effectDuration, 0f);

@@ -53,7 +53,10 @@ public class AsyncSceneLoader : MonoBehaviour {
     }
 
     public void ToSelectedScene(int sceneIndex) {
-        _SceneSelectionCanvas.SetActive(false);
+        if (_SceneSelectionCanvas != null) {
+            _SceneSelectionCanvas.SetActive(false);
+        }
+        
         a = SceneManager.LoadSceneAsync(sceneIndex);
         a.allowSceneActivation = true;
         _LoadingImage.SetActive(true);

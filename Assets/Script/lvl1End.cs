@@ -17,6 +17,7 @@ public class lvl1End : MonoBehaviour {
     // Use this for initialization
     void Start () {
         iTween.FadeTo(finalFish, 0f, 0f);
+        
     }
 	
 	// Update is called once per frame
