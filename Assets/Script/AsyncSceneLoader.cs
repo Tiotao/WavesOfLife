@@ -61,4 +61,5 @@ public class AsyncSceneLoader : MonoBehaviour {
         _LoadingImage.SetActive(true);
         
     }
+
 }

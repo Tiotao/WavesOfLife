@@ -34,6 +34,7 @@ public class FadeInWhenBeginning : MonoBehaviour {
 		} else {
 			_isFading = false;
 			t = 0;
+			// gameObject.SetActive(false);
 		}
 	}
 
@@ -46,9 +47,11 @@ public class FadeInWhenBeginning : MonoBehaviour {
 
 	public void FadeOut(float duration, float delay) {
 		StartCoroutine(StartFading(duration, delay, false));
+		// gameObject.SetActive(false);
 	}
 
 	public void FadeIn(float duration, float delay) {
+		// gameObject.SetActive(true);
 		StartCoroutine(StartFading(duration, delay, true));
 	}
 

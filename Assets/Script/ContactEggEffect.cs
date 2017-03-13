@@ -7,6 +7,8 @@ public class ContactEggEffect : MonoBehaviour {
 	public GameObject _Name;
     public GameObject _Glow;
     public GameObject _WhiteOverylay;
+
+	public FadeInWhenBeginning _BlackOverlay;
 	public GameObject _BackgroundMusic;
     public float _effectDuration;
 
@@ -57,11 +59,15 @@ public class ContactEggEffect : MonoBehaviour {
 	void NameShow()
 	{
 		_Name.SetActive(true);
-		Invoke ("ChangeScene",7.0f);
+		_BlackOverlay.FadeOut(2f, 7f);
+		Invoke ("ChangeScene",10.0f);
 	}
+
+
 	void ChangeScene()
 	{
 		_AsyncSceneLoader.ToSelectedScene(0);
+		
 		// DontDestroyOnLoad (_BackgroundMusic);
 		// SceneManager.LoadScene ("End");
 	}
