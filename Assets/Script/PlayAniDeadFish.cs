@@ -1,9 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class PlayAniDeadFish : MonoBehaviour
 {
-    public Sprite[] BG;
+    public List<Sprite> BG;
     public SpermGroupController _player;
     public string _spriteFolderName = "lvl1_deadfish";
     public int _frameNumber = 45;
@@ -13,12 +14,32 @@ public class PlayAniDeadFish : MonoBehaviour
     private float counter;
     public bool startplay;
     private bool set;
+
+    public bool _spriteLoaded = false;
     // Use this for initialization
     void Start()
     {
-        BG = Resources.LoadAll<Sprite>(_spriteFolderName);
+        for(int i = 0; i <= _frameNumber; i++) {
+            StartCoroutine(LoadSpriteFrame(i));
+        }
         counter = 1 / _frameRate;
         this.GetComponent<SpriteRenderer>().sprite = null;
+    }
+
+    IEnumerator LoadSpriteFrame(int frame) {
+        
+        string path = _spriteFolderName + "/endFIsh_"  +frame.ToString("00000");
+        ResourceRequest req = Resources.LoadAsync<Sprite>(path);
+        
+        while(!req.isDone) {
+            yield return null;
+        }
+        
+        BG.Add(req.asset as Sprite);
+        if (frame >= _frameNumber) {
+            _spriteLoaded = true;
+        }
+        
     }
 
     // Update is called once per frame
@@ -28,7 +49,7 @@ public class PlayAniDeadFish : MonoBehaviour
     }
     void FixedUpdate()
     {
-        if (startplay)
+        if (startplay && _spriteLoaded)
         {
             if (Begin > 0)
                 Begin -= Time.deltaTime;
@@ -42,7 +63,7 @@ public class PlayAniDeadFish : MonoBehaviour
                 counter -= Time.deltaTime;
                 if (counter <= 0)
                 {
-                    if (i < BG.Length)
+                    if (i < BG.Count)
                     {
                         this.GetComponent<SpriteRenderer>().sprite = BG[i];
                         i++;

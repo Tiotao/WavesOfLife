@@ -1,10 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class FishFlowBy : MonoBehaviour
 {
     public bool Flow;
-    public Sprite[] BG;
+
+    private bool _spriteLoaded = false;
+    public List<Sprite> BG;
     private int i = 0;
     private float counter = 1/4 ;
     private float Begin = 0f;
@@ -13,10 +16,28 @@ public class FishFlowBy : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        BG = Resources.LoadAll<Sprite>("BigFish");
+        for(int i = 0; i <= 72; i++) {
+            StartCoroutine(LoadSpriteFrame(i));
+        }
     }
 
-    // Update is called once per frame
+    IEnumerator LoadSpriteFrame(int frame) {
+        
+        string path = "Level1_BigFish/fish_"  +frame.ToString("00000");
+        ResourceRequest req = Resources.LoadAsync<Sprite>(path);
+        
+        while(!req.isDone) {
+            yield return null;
+        }
+        
+        BG.Add(req.asset as Sprite);
+        if (frame >= 72) {
+            _spriteLoaded = true;
+        }
+        
+    }
+
+    
     void Update()
     {
         if (Flow)
@@ -33,7 +54,7 @@ public class FishFlowBy : MonoBehaviour
     }
     void FixedUpdate()
     {
-        if (Flow)
+        if (Flow && _spriteLoaded)
         {
            
            

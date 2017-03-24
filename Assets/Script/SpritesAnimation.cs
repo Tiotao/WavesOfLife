@@ -1,10 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class SpritesAnimation : MonoBehaviour {
 
-    public Sprite[] BG;
+    public List<Sprite> BG;
     public string _spriteFolderName = "level1_animation";
+    public string _spriteFileHeader = "level1";
     public int _frameNumber = 45;
     public int _frameRate = 12;
     public float Begin = 0f;
@@ -15,17 +17,48 @@ public class SpritesAnimation : MonoBehaviour {
     private  float timer=0;
     //  private float Begin = 39.0f;
     
+    public bool _mapLoaded = false;
+     
     private bool reverse;
     // Use this for initialization
     void Start()
     {
-        BG = Resources.LoadAll<Sprite>(_spriteFolderName);
+        for(int i = 0; i <= _frameNumber; i++) {
+            StartCoroutine(LoadMapFrame(i));
+        }
+        
         counter = 1f / _frameRate;
     }
 
+    
+
+    IEnumerator LoadMapFrame(int frame) {
+        
+        string path = _spriteFolderName + "/" + _spriteFileHeader  +frame.ToString("00000");
+        ResourceRequest req = Resources.LoadAsync<Sprite>(path);
+        
+        while(!req.isDone) {
+            yield return null;
+        }
+        
+        BG.Add(req.asset as Sprite);
+        if (frame >= _frameNumber) {
+            _mapLoaded = true;
+        }
+        
+    }
+
+    
+
+    
     // Update is called once per frame
     void FixedUpdate()
     {
+        
+        if (!_mapLoaded) {
+            return;
+        }
+        
         if (Begin > 0&& Begin<99)
             Begin -= Time.deltaTime;
 
@@ -67,4 +100,5 @@ public class SpritesAnimation : MonoBehaviour {
             }
         }
     }
+    
 }

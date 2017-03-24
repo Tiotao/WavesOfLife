@@ -1034,6 +1034,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BG: []
   _spriteFolderName: BGanimation
+  _spriteFileHeader: level1
   _frameNumber: 45
   _frameRate: 12
   Begin: 39
@@ -6377,7 +6378,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BG: []
-  _spriteFolderName: level3Animation
+  _spriteFolderName: level3
+  _spriteFileHeader: level3
   _frameNumber: 48
   _frameRate: 12
   Begin: 0
@@ -9121,6 +9123,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BG: []
   _spriteFolderName: level3Animation
+  _spriteFileHeader: level1
   _frameNumber: 48
   _frameRate: 12
   Begin: 0
@@ -13551,6 +13554,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BG: []
   _spriteFolderName: level3Animation
+  _spriteFileHeader: level1
   _frameNumber: 48
   _frameRate: 12
   Begin: 0

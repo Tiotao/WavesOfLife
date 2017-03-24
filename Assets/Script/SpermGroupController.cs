@@ -21,14 +21,20 @@ public class SpermGroupController : MonoBehaviour {
     public float _maxInstanceScale = 0.3f;
     public float _minInstanceScale = 0.3f;
 
+    private int _spawnCount = 0;
+
+
 	// Use this for initialization
 	void Start () {
-        SpawnSperms(_initSpermAmount);
+        // SpawnSperms(_initSpermAmount);
         
     }
 	
 	// Update is called once per frame
 	void Update () {
+
+        SpawnSperms(_initSpermAmount);
+
 		if (transform.childCount == 0 && !_isChecking) {
 			_isDying = true;
 		}
@@ -66,16 +72,27 @@ public class SpermGroupController : MonoBehaviour {
 
 	}
 
+    
+
     void SpawnSperms(int spermAmount)
     {
-        for (int i = 0; i < spermAmount; i++)
-        {
+        if (_spawnCount < spermAmount) {
             GameObject sperm = Instantiate(_SpermObject) as GameObject;
             sperm.transform.parent = transform;
             float scale = Random.Range(_maxInstanceScale, _minInstanceScale);
             sperm.transform.localPosition = new Vector3 (0, 0, 0);
             sperm.transform.localScale = new Vector3(scale, scale, scale);
         }
+        _spawnCount++;
+        
+        // for (int i = 0; i < spermAmount; i++)
+        // {
+        //     GameObject sperm = Instantiate(_SpermObject) as GameObject;
+        //     sperm.transform.parent = transform;
+        //     float scale = Random.Range(_maxInstanceScale, _minInstanceScale);
+        //     sperm.transform.localPosition = new Vector3 (0, 0, 0);
+        //     sperm.transform.localScale = new Vector3(scale, scale, scale);
+        // }
 
     }
 

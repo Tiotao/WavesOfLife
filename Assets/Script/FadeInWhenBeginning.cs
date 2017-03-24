@@ -13,7 +13,7 @@ public class FadeInWhenBeginning : MonoBehaviour {
 	
 
 	// Use this for initialization
-	void Start () {
+	void Awake () {
 		FadeIn(_effectDuration, 0f);
 		//StartCoroutine(StartFading (_effectDuration, 2f, true));
 	}

@@ -17,7 +17,7 @@ public class LoadingAnimation : MonoBehaviour {
 	}
 
 	IEnumerator LoadingScene() {
-		AsyncOperation ao = SceneManager.LoadSceneAsync(2, LoadSceneMode.Additive);
+		AsyncOperation ao = SceneManager.LoadSceneAsync(1);
 		ao.allowSceneActivation = false;
 		while (ao.progress < 0.9f) {
 			yield return null;
