@@ -24,11 +24,13 @@ public class SceneSelector : MonoBehaviour {
             if (l.Unlocked) {
                 int _sceneIndex = levelIndex + _sceneIndexOffset;
                 _SceneBtns[levelIndex].gameObject.GetComponent<Image>().sprite = _SceneUnlockBtnsSprite[levelIndex];
+                
                 _SceneBtns[levelIndex].onClick.AddListener(delegate () { LoadScene(_sceneIndex); });
                 iTween.ScaleBy(_SceneBtns[levelIndex].gameObject, new Vector3(1.5f, 1.5f, 1.5f), 1f);
                 ScaleUp(_SceneBtns[levelIndex].gameObject);
             } else {
                 iTween.ScaleBy(_SceneBtns[levelIndex].gameObject, new Vector3(0.5f, 0.5f, 0.5f), 1f);
+                _SceneBtns[levelIndex].gameObject.transform.GetChild(0).gameObject.SetActive(false);
             }
         }
         //SetLevel("1", true);

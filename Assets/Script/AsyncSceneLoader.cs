@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class AsyncSceneLoader : MonoBehaviour {
 
-    AsyncOperation a;
+    
     public GameObject _LoadingImage;
 
     public GameObject _SceneSelectionCanvas;
@@ -44,21 +44,31 @@ public class AsyncSceneLoader : MonoBehaviour {
 		}
     }
 
-    IEnumerator FadeToBlack() {
-        _isFading = true;
-        _BlackOverlay.SetActive(true);
-        yield return new WaitForSeconds (_effectDuration);
-        a.allowSceneActivation = true;
-    }
+    // IEnumerator FadeToBlack() {
+    //     _isFading = true;
+    //     _BlackOverlay.SetActive(true);
+    //     yield return new WaitForSeconds (_effectDuration);
+    //     a.allowSceneActivation = true;
+    // }
 
     public void ToSelectedScene(int sceneIndex) {
+        StartCoroutine(Load(sceneIndex));
+    }
+
+
+
+    IEnumerator Load(int sceneIndex) {
         if (_SceneSelectionCanvas != null) {
             _SceneSelectionCanvas.SetActive(false);
         }
-        
-        a = SceneManager.LoadSceneAsync(sceneIndex);
-        a.allowSceneActivation = true;
+        AsyncOperation a = SceneManager.LoadSceneAsync(sceneIndex);
+        // a.allowSceneActivation = true;
+
         _LoadingImage.SetActive(true);
+        while(!a.isDone){
+            yield return null;
+        }
+        
         
     }
 
