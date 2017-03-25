@@ -290,7 +290,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.03137255, g: 0.03137255, b: 0.03137255, a: 0}
+  m_BackGroundColor: {r: 0.003921569, g: 0, b: 0, a: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -301,7 +301,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 6
+  orthographic size: 5
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1039,6 +1039,7 @@ MonoBehaviour:
   _frameRate: 12
   Begin: 39
   Speed: 0
+  _mapLoaded: 0
 --- !u!1 &107001171 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1686685675039340, guid: 0fbbbaba079bd4b4b8c41e05c8054c3a,
@@ -1105,7 +1106,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingOrder: 10
   m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Color: {r: 0.03137255, g: 0.03137255, b: 0.03137255, a: 1}
+  m_Color: {r: 0.003921569, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
 --- !u!1 &129983629
@@ -6384,6 +6385,7 @@ MonoBehaviour:
   _frameRate: 12
   Begin: 0
   Speed: 0
+  _mapLoaded: 0
 --- !u!1001 &880846840
 Prefab:
   m_ObjectHideFlags: 0
@@ -7224,7 +7226,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingOrder: 10
   m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Color: {r: 0.03137255, g: 0.03137255, b: 0.03137255, a: 1}
+  m_Color: {r: 0.003921569, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
 --- !u!4 &942319857
@@ -9128,6 +9130,7 @@ MonoBehaviour:
   _frameRate: 12
   Begin: 0
   Speed: 0
+  _mapLoaded: 0
 --- !u!212 &1206875839
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -10155,7 +10158,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingOrder: 10
   m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Color: {r: 0.03137255, g: 0.03137255, b: 0.03137255, a: 1}
+  m_Color: {r: 0.003921569, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
 --- !u!4 &1357347519
@@ -12021,7 +12024,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingOrder: 10
   m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Color: {r: 0.03137255, g: 0.03137255, b: 0.03137255, a: 1}
+  m_Color: {r: 0.003921569, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
 --- !u!4 &1598413978
@@ -13559,6 +13562,7 @@ MonoBehaviour:
   _frameRate: 12
   Begin: 0
   Speed: 0
+  _mapLoaded: 0
 --- !u!212 &1848888142
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -13885,7 +13889,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingOrder: 10
   m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Color: {r: 0.03137255, g: 0.03137255, b: 0.03137255, a: 1}
+  m_Color: {r: 0.003921569, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
 --- !u!4 &1970890375

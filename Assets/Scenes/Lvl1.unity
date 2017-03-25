@@ -1145,7 +1145,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6d29055a1a1a444380be13257dc8148, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  zoomAmount: 2.5
+  zoomAmount: 3
 --- !u!21 &133596980
 Material:
   serializedVersion: 6
@@ -6404,6 +6404,11 @@ Prefab:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114000012026085146, guid: 3d6d8b1c222642b43a5f2d0ce6c2bb35,
+        type: 2}
+      propertyPath: _levelNumber
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3d6d8b1c222642b43a5f2d0ce6c2bb35, type: 2}
   m_IsPrefabParent: 0
@@ -7210,7 +7215,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6d29055a1a1a444380be13257dc8148, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  zoomAmount: 5
+  zoomAmount: 4
 --- !u!1 &898428165
 GameObject:
   m_ObjectHideFlags: 0
@@ -8058,7 +8063,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6d29055a1a1a444380be13257dc8148, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  zoomAmount: 5
+  zoomAmount: 4
 --- !u!4 &993885420
 Transform:
   m_ObjectHideFlags: 0
@@ -14068,7 +14073,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6d29055a1a1a444380be13257dc8148, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  zoomAmount: 2.5
+  zoomAmount: 3
 --- !u!4 &1549011975
 Transform:
   m_ObjectHideFlags: 0

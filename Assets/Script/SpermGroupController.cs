@@ -114,6 +114,11 @@ public class SpermGroupController : MonoBehaviour {
             sperm.transform.Find("SpermTail").GetComponent<TrailRenderer>().startWidth = 0.03f;
             sperm.transform.Find("SpermTail").GetComponent<TrailRenderer>().time = 2f;
         }
+
+        if (_levelNumber == 2)
+        {
+            sperm.transform.localScale = new Vector3(0.7f, 0.7f, 0.7f);
+        }
         
     }
 

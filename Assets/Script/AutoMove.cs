@@ -41,14 +41,14 @@ public class AutoMove : MonoBehaviour {
 	void Update () {
 
 		if (ZoomOut) {
-			_C.orthographicSize =  Mathf.SmoothDamp(_C.orthographicSize,9.0f,ref _V,0.5f);
-			if (_C.orthographicSize == 9) {
+			_C.orthographicSize =  Mathf.SmoothDamp(_C.orthographicSize,7.0f,ref _V,0.5f);
+			if (_C.orthographicSize == 7) {
 				ZoomOut = false;
 			}
 		}
 		if (ZoomIn) {
-			_C.orthographicSize =  Mathf.SmoothDamp(_C.orthographicSize,7.0f,ref _V,0.5f);
-			if (_C.orthographicSize == 7) {
+			_C.orthographicSize =  Mathf.SmoothDamp(_C.orthographicSize,5.0f,ref _V,0.5f);
+			if (_C.orthographicSize == 5) {
 				ZoomIn = false;
 			}
 		}
