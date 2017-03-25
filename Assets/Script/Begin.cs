@@ -6,13 +6,15 @@ public class Begin : MonoBehaviour {
 	public GameObject _TouchController;
 	public GameObject _Camera;
 	public bool _toSceneSelection = false;
+
+	AudioSource _audio;
 	
 	Vector3 _targetCamPosition = new Vector3(19.7f, -18f, -2.58f);
 	Vector3 _targetCamRotation = new Vector3(0f, 0f, -90f);
 
     // Use this for initialization
     void Start () {
-
+		_audio = GetComponent<AudioSource>();
         
     }
 	
@@ -27,6 +29,9 @@ public class Begin : MonoBehaviour {
 		if (other.CompareTag("Player")) {
 			_toSceneSelection = true;
 			other.gameObject.SetActive(false);
+			if (!_audio.isPlaying) {
+				_audio.Play();
+			}
 		}
 	}
 

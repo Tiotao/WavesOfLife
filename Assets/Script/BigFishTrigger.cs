@@ -3,9 +3,10 @@ using System.Collections;
 
 public class BigFishTrigger : MonoBehaviour {
     public GameObject bigfish;
+    AudioSource _audio;
 	// Use this for initialization
 	void Start () {
-	
+        _audio = GetComponent<AudioSource>();
 	}
 	
 	// Update is called once per frame
@@ -17,6 +18,9 @@ public class BigFishTrigger : MonoBehaviour {
         if(other.CompareTag("Player"))
         {
             bigfish.GetComponent<FishFlowBy>().Flow = true;
+            if (!_audio.isPlaying) {
+                _audio.Play();
+            }
         }
     }
 }

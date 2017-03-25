@@ -8,6 +8,8 @@ public class lvl1End : MonoBehaviour {
     public GameObject Jelly;
     public GameObject _BlackOverlay;
 
+    public GameObject _MapMask;
+
     bool _isFading = false;
     bool _isBrightening = false;
 
@@ -39,6 +41,7 @@ public class lvl1End : MonoBehaviour {
         if (t > _fadingDuration + 3f && _isFading)
         {
             _isFading = false;
+            _MapMask.SetActive(false);
             _isBrightening = true;
             t = 0f;
         }
