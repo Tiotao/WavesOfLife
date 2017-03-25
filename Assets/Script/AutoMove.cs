@@ -47,8 +47,8 @@ public class AutoMove : MonoBehaviour {
 			}
 		}
 		if (ZoomIn) {
-			_C.orthographicSize =  Mathf.SmoothDamp(_C.orthographicSize,5.0f,ref _V,0.5f);
-			if (_C.orthographicSize == 5) {
+			_C.orthographicSize =  Mathf.SmoothDamp(_C.orthographicSize,4.0f,ref _V,0.5f);
+			if (_C.orthographicSize == 4) {
 				ZoomIn = false;
 			}
 		}
