@@ -61,13 +61,17 @@ public class AsyncSceneLoader : MonoBehaviour {
         if (_SceneSelectionCanvas != null) {
             _SceneSelectionCanvas.SetActive(false);
         }
+        
         AsyncOperation a = SceneManager.LoadSceneAsync(sceneIndex);
-        // a.allowSceneActivation = true;
+        a.allowSceneActivation = false;
 
         _LoadingImage.SetActive(true);
-        while(!a.isDone){
+        while(a.progress < 0.9f){
             yield return null;
         }
+        _isFading = true;
+        yield return new WaitForSeconds(2f);
+        a.allowSceneActivation = true;
         
         
     }

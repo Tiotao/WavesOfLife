@@ -27,19 +27,16 @@ public class Lvl1EndingAnimation : MonoBehaviour {
             FlowBugs[i].GetComponent<FlowBugsMove>().BeginMove = true;
         }
         LevelAccess.SetLevel("1", true);
+        StartCoroutine(FadingToNextScene());
+    }
+
+    IEnumerator FadingToNextScene() {
+        yield return new WaitForSeconds(_Time);
+        _camera.GetComponent<CameraFollow>().enabled = false;
+        _AsyncSceneLoader.ToSelectedScene(2);
+        
     }
 	
 	// Update is called once per frame
-	void Update () {
-        timer +=Time.deltaTime;
-        if(timer>=_Time)
-        {
-            if (!_startFading) {
-                _startFading = true;
-                _BlackOverlay.FadeOut(2f, 2f);
-            }
-            _AsyncSceneLoader.ToSelectedScene(2);
-            _camera.GetComponent<CameraFollow>().enabled = false;
-        }
-	}
+	
 }
