@@ -10,6 +10,7 @@ public class lvl1End : MonoBehaviour {
 
     public GameObject _MapMask;
 
+    public GameObject[] walls;
     bool _isFading = false;
     bool _isBrightening = false;
 
@@ -62,6 +63,10 @@ public class lvl1End : MonoBehaviour {
             finalFish.GetComponent<PlayAniDeadFish>().startplay = true;
             iTween.FadeTo(Jelly.transform.Find("GlowPointSprite").gameObject, 0f, 0.5f);
             // Jelly.SetActive(false);
+            for(int i=0;i< walls.Length;i++)
+            {
+                walls[i].SetActive(false);
+            }
 
             Invoke("StartMove", 1f);
             Invoke("DeleteFish", 4f);
