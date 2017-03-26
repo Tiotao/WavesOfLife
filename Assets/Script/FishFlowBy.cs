@@ -6,6 +6,10 @@ public class FishFlowBy : MonoBehaviour
 {
     public bool Flow;
 
+    public string _spriteName = "BigFish";
+
+    public string _levelNumber = "1";
+
     private bool _spriteLoaded = false;
     public List<Sprite> BG;
     private int i = 0;
@@ -23,7 +27,8 @@ public class FishFlowBy : MonoBehaviour
 
     IEnumerator LoadSpriteFrame(int frame) {
         
-        string path = "Level1_BigFish/fish_"  +frame.ToString("00000");
+        
+        string path = "Level" + _levelNumber + "_" + _spriteName + "/" + _spriteName + "_" +frame.ToString("00000");
         ResourceRequest req = Resources.LoadAsync<Sprite>(path);
         
         while(!req.isDone) {

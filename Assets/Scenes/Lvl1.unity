@@ -362,7 +362,7 @@ Transform:
   m_LocalScale: {x: 8.697003, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 1.6250001}
 --- !u!1 &49381576
 GameObject:
@@ -916,7 +916,7 @@ Transform:
   - {fileID: 2059117260}
   - {fileID: 237874942}
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &85289064
 MeshRenderer:
@@ -1023,7 +1023,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000012967921638, guid: c75eb4e9014c0be45a52bcfca3cf87b5, type: 2}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 82000013515154164, guid: c75eb4e9014c0be45a52bcfca3cf87b5,
         type: 2}
@@ -1819,7 +1819,7 @@ Transform:
   m_Children:
   - {fileID: 1217320492}
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &237874940
 GameObject:
@@ -1898,8 +1898,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BG: []
-  _spriteFolderName: Level1_Map
-  _spriteFileHeader: level1_
+  _spriteName: Map
+  _levelNumber: 1
   _frameNumber: 45
   _frameRate: 24
   Begin: 0
@@ -2230,7 +2230,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000011527232442, guid: 20ec600ef91dee44da2530f6c6f1cc98, type: 2}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 20ec600ef91dee44da2530f6c6f1cc98, type: 2}
@@ -3204,7 +3204,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 23
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &446427914
 MonoBehaviour:
@@ -6664,7 +6664,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &724152309
 GameObject:
@@ -7294,8 +7294,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BG: []
-  _spriteFolderName: Light
-  _spriteFileHeader: UnderWater
+  _spriteName: Light
+  _levelNumber: 1
   _frameNumber: 48
   _frameRate: 24
   Begin: 999
@@ -7338,7 +7338,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000012254916020, guid: ef678e024a035a345a0ee0f3ea1f9a1c, type: 2}
       propertyPath: m_RootOrder
-      value: 24
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 114000012970514554, guid: ef678e024a035a345a0ee0f3ea1f9a1c,
         type: 2}
@@ -7531,7 +7531,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 25
+  m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &934533895
 Prefab:
@@ -7570,7 +7570,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000012558095142, guid: 895cb01cc6c9f0443b4d8a09afe8b0ad, type: 2}
       propertyPath: m_RootOrder
-      value: 27
+      value: 26
       objectReference: {fileID: 0}
     - target: {fileID: 1000011855131864, guid: 895cb01cc6c9f0443b4d8a09afe8b0ad, type: 2}
       propertyPath: m_IsActive
@@ -7869,7 +7869,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &969186601
 GameObject:
@@ -7967,7 +7967,7 @@ Transform:
   m_Children:
   - {fileID: 557273090}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &973287283
 GameObject:
@@ -8052,7 +8052,7 @@ Transform:
   m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 22
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -216.00499}
 --- !u!114 &973287287
 MonoBehaviour:
@@ -8067,7 +8067,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BG: []
   _player: {fileID: 628288724}
-  _spriteFolderName: lvl1_deadfish
+  _spriteName: DeadFish
+  _levelNumber: 1
   _frameNumber: 48
   _frameRate: 24
   Begin: 0
@@ -8490,6 +8491,7 @@ Transform:
   - {fileID: 1381642475}
   - {fileID: 413160692}
   - {fileID: 1747572724}
+  - {fileID: 1367148428}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -8640,7 +8642,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000011962617356, guid: cc2f8651492b35c4f8924445bc0e53c1, type: 2}
       propertyPath: m_RootOrder
-      value: 20
+      value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 114000011669089038, guid: cc2f8651492b35c4f8924445bc0e53c1,
         type: 2}
@@ -9629,7 +9631,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1279314180}
   - component: {fileID: 1279314179}
-  - component: {fileID: 1279314178}
   m_Layer: 0
   m_Name: level1 (2)
   m_TagString: Untagged
@@ -9637,25 +9638,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1279314178
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1279314177}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b4e704266436fb47a6495e9d18da8b8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  BG: []
-  _spriteFolderName: Level1_Map
-  _spriteFileHeader: level1_
-  _frameNumber: 45
-  _frameRate: 24
-  Begin: 0
-  Speed: 0
-  _mapLoaded: 0
 --- !u!212 &1279314179
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -9702,7 +9684,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 26
+  m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1294569731
 GameObject:
@@ -10123,7 +10105,7 @@ Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1041143755}
     m_Modifications:
     - target: {fileID: 4000011536598142, guid: f5cee020620c37e478f6e972a12f9af9, type: 2}
       propertyPath: m_LocalPosition.x
@@ -10139,15 +10121,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000011536598142, guid: f5cee020620c37e478f6e972a12f9af9, type: 2}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4000011536598142, guid: f5cee020620c37e478f6e972a12f9af9, type: 2}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4000011536598142, guid: f5cee020620c37e478f6e972a12f9af9, type: 2}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4000011536598142, guid: f5cee020620c37e478f6e972a12f9af9, type: 2}
       propertyPath: m_LocalRotation.w
@@ -10155,7 +10137,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000011536598142, guid: f5cee020620c37e478f6e972a12f9af9, type: 2}
       propertyPath: m_RootOrder
-      value: 5
+      value: 51
       objectReference: {fileID: 0}
     - target: {fileID: 1000012403981096, guid: f5cee020620c37e478f6e972a12f9af9, type: 2}
       propertyPath: m_Name
@@ -10164,6 +10146,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f5cee020620c37e478f6e972a12f9af9, type: 2}
   m_IsPrefabParent: 0
+--- !u!4 &1367148428 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4000011536598142, guid: f5cee020620c37e478f6e972a12f9af9,
+    type: 2}
+  m_PrefabInternal: {fileID: 1367148427}
 --- !u!1 &1374696135
 GameObject:
   m_ObjectHideFlags: 0
@@ -10719,7 +10706,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000013132690778, guid: d413d304035e81a4e88a4ccea5d03202, type: 2}
       propertyPath: m_RootOrder
-      value: 12
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 1000010096414036, guid: d413d304035e81a4e88a4ccea5d03202, type: 2}
       propertyPath: m_IsActive
@@ -14376,7 +14363,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1572352597
 GameObject:
@@ -14440,7 +14427,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 21
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1584508270
 GameObject:
@@ -14819,7 +14806,7 @@ Transform:
   - {fileID: 1814394658}
   - {fileID: 400911249}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1682861912
 GameObject:
@@ -14913,7 +14900,7 @@ Transform:
   - {fileID: 132278856}
   - {fileID: 893456685}
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1696909968
 GameObject:
@@ -15223,7 +15210,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1767928075
 MonoBehaviour:
@@ -15753,7 +15740,7 @@ Prefab:
     - target: {fileID: 224000010480233156, guid: 0fbbbaba079bd4b4b8c41e05c8054c3a,
         type: 2}
       propertyPath: m_RootOrder
-      value: 28
+      value: 27
       objectReference: {fileID: 0}
     - target: {fileID: 224000010480233156, guid: 0fbbbaba079bd4b4b8c41e05c8054c3a,
         type: 2}
@@ -18686,6 +18673,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Flow: 0
+  _spriteName: BigFish
+  _levelNumber: 1
   BG: []
 --- !u!212 &1908261493
 SpriteRenderer:
@@ -18799,7 +18788,7 @@ Transform:
   - {fileID: 1987680453}
   - {fileID: 1407592646}
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 28.751665}
 --- !u!1 &1914569510
 GameObject:

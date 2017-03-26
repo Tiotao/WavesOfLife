@@ -5,8 +5,10 @@ using System.Collections.Generic;
 public class SpritesAnimation : MonoBehaviour {
 
     public List<Sprite> BG;
-    public string _spriteFolderName = "level1_animation";
-    public string _spriteFileHeader = "level1";
+    // public string _spriteFolderName = "level1_animation";
+    // public string _spriteFileHeader = "level1";
+    public string _spriteName = "";
+    public string _levelNumber = "0";
     public int _frameNumber = 45;
     public int _frameRate = 12;
     public float Begin = 0f;
@@ -34,7 +36,8 @@ public class SpritesAnimation : MonoBehaviour {
 
     IEnumerator LoadMapFrame(int frame) {
         
-        string path = _spriteFolderName + "/" + _spriteFileHeader  +frame.ToString("00000");
+        string path = "Level" + _levelNumber + "_" + _spriteName + "/" + _spriteName + "_" +frame.ToString("00000");
+        
         ResourceRequest req = Resources.LoadAsync<Sprite>(path);
         
         while(!req.isDone) {

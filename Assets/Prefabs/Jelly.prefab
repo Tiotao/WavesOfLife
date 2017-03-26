@@ -848,12 +848,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BG: []
-  _spriteFolderName: Level1_JellyFish
-  _spriteFileHeader: jellyFish_
+  _spriteName: JellyFish
+  _levelNumber: 1
   _frameNumber: 120
   _frameRate: 24
   Begin: 0
   Speed: 0
+  _mapLoaded: 0
 --- !u!135 &135000010538695618
 SphereCollider:
   m_ObjectHideFlags: 1

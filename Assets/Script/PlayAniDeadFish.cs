@@ -6,7 +6,9 @@ public class PlayAniDeadFish : MonoBehaviour
 {
     public List<Sprite> BG;
     public SpermGroupController _player;
-    public string _spriteFolderName = "lvl1_deadfish";
+    public string _spriteName = "DeadFish";
+
+    public string _levelNumber = "1";
     public int _frameNumber = 45;
     public int _frameRate = 6;
     public float Begin = 0f;
@@ -28,7 +30,8 @@ public class PlayAniDeadFish : MonoBehaviour
 
     IEnumerator LoadSpriteFrame(int frame) {
         
-        string path = _spriteFolderName + "/endFIsh_"  +frame.ToString("00000");
+        // string path = _spriteFolderName + "/endFIsh_"  +frame.ToString("00000");
+        string path = "Level" + _levelNumber + "_" + _spriteName + "/" + _spriteName + "_" +frame.ToString("00000");
         ResourceRequest req = Resources.LoadAsync<Sprite>(path);
         
         while(!req.isDone) {

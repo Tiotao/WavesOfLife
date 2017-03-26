@@ -1033,8 +1033,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BG: []
-  _spriteFolderName: BGanimation
-  _spriteFileHeader: level1
+  _spriteName: 
+  _levelNumber: 0
   _frameNumber: 45
   _frameRate: 12
   Begin: 39
@@ -6379,8 +6379,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BG: []
-  _spriteFolderName: level3
-  _spriteFileHeader: level3
+  _spriteName: Map
+  _levelNumber: 3
   _frameNumber: 48
   _frameRate: 12
   Begin: 0
@@ -9104,7 +9104,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1206875840}
   - component: {fileID: 1206875839}
-  - component: {fileID: 1206875838}
   m_Layer: 0
   m_Name: MouseContainer
   m_TagString: Untagged
@@ -9112,25 +9111,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1206875838
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1206875837}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b4e704266436fb47a6495e9d18da8b8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  BG: []
-  _spriteFolderName: level3Animation
-  _spriteFileHeader: level1
-  _frameNumber: 48
-  _frameRate: 12
-  Begin: 0
-  Speed: 0
-  _mapLoaded: 0
 --- !u!212 &1206875839
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -13536,7 +13516,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1848888143}
   - component: {fileID: 1848888142}
-  - component: {fileID: 1848888141}
   m_Layer: 0
   m_Name: test
   m_TagString: Untagged
@@ -13544,25 +13523,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1848888141
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1848888140}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b4e704266436fb47a6495e9d18da8b8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  BG: []
-  _spriteFolderName: level3Animation
-  _spriteFileHeader: level1
-  _frameNumber: 48
-  _frameRate: 12
-  Begin: 0
-  Speed: 0
-  _mapLoaded: 0
 --- !u!212 &1848888142
 SpriteRenderer:
   m_ObjectHideFlags: 0
