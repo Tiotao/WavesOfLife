@@ -2153,11 +2153,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BG: []
-  _spriteFolderName: Lvl2_animation
+  _spriteName: Map
+  _levelNumber: 2
   _frameNumber: 24
   _frameRate: 18
   Begin: 0
   Speed: 0
+  _mapLoaded: 0
 --- !u!95 &333853805
 Animator:
   serializedVersion: 3
