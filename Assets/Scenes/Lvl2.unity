@@ -10890,7 +10890,7 @@ MonoBehaviour:
   _levelNumber: 2
   _frameNumber: 120
   _frameRate: 24
-  Begin: 0
+  Begin: 100
   Speed: 0
   IfPlayOnce: 1
   FinishAni: 0
