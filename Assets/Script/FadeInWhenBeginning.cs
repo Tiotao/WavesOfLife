@@ -9,12 +9,13 @@ public class FadeInWhenBeginning : MonoBehaviour {
 
 	bool _isFadingIn = true;
 	public float _effectDuration = 1f;
+	public float _delay = 0f;
 
 	
 
 	// Use this for initialization
 	void Awake () {
-		FadeIn(_effectDuration, 0f);
+		FadeIn(_effectDuration, _delay);
 		//StartCoroutine(StartFading (_effectDuration, 2f, true));
 	}
 	

@@ -25,6 +25,10 @@ public class SpritesAnimation : MonoBehaviour {
      
     private bool reverse;
     // Use this for initialization
+
+    void Awake() {
+        Application.backgroundLoadingPriority = ThreadPriority.Low;
+    }
     void Start()
     {
         for(int i = 0; i <= _frameNumber; i++) {
