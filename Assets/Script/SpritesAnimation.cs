@@ -17,6 +17,8 @@ public class SpritesAnimation : MonoBehaviour {
     private bool set;
     public float Speed;
     private  float timer=0;
+    public bool IfPlayOnce=false;
+    public bool FinishAni = false;
     //  private float Begin = 39.0f;
     
     public bool _mapLoaded = false;
@@ -85,16 +87,22 @@ public class SpritesAnimation : MonoBehaviour {
                     this.GetComponent<SpriteRenderer>().sprite = BG[i];
                     i++;
                 }
-                else
+                else if(!IfPlayOnce)
                 {
                     this.GetComponent<SpriteRenderer>().sprite = BG[i];
                     i--;
                 }
                 counter = 1f / _frameRate;
 
-                if (i >= _frameNumber)
+                if (i >= _frameNumber&&!IfPlayOnce)
                 {
                     reverse = true;
+                }
+                else if(i >= _frameNumber && IfPlayOnce)
+                {
+                    //this.enabled = false;
+                    Begin = 100;
+                    FinishAni = true;
                 }
                 if (i <= 0)
                 {
