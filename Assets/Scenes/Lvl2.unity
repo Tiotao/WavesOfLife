@@ -6398,7 +6398,7 @@ Prefab:
         type: 2}
       propertyPath: _SpermObject
       value: 
-      objectReference: {fileID: 1000010096414036, guid: d413d304035e81a4e88a4ccea5d03202,
+      objectReference: {fileID: 1412389861480506, guid: cbc2512c5bc0fd8438644cef21cbe7f8,
         type: 2}
     - target: {fileID: 114000012026085146, guid: 3d6d8b1c222642b43a5f2d0ce6c2bb35,
         type: 2}
@@ -6413,7 +6413,7 @@ Prefab:
     - target: {fileID: 114000012026085146, guid: 3d6d8b1c222642b43a5f2d0ce6c2bb35,
         type: 2}
       propertyPath: _initSpermAmount
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3d6d8b1c222642b43a5f2d0ce6c2bb35, type: 2}
@@ -9539,7 +9539,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1000010921017650, guid: 0fbbbaba079bd4b4b8c41e05c8054c3a, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1000010921017650, guid: 0fbbbaba079bd4b4b8c41e05c8054c3a, type: 2}
       propertyPath: m_Name
