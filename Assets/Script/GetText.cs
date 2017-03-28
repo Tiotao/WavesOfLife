@@ -19,7 +19,7 @@ public class GetText : MonoBehaviour {
 		// 	this.GetComponent<Text> ().text = "Welcome to this world, Stranger.";
 		// }
 
-		this.GetComponent<Text> ().text = "Welcome to this world, Stranger.";
+		// this.GetComponent<Text> ().text = "Welcome to this world, Stranger.";
 
 		_isBrightenUp = true;
 	}

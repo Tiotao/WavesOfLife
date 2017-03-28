@@ -1904,6 +1904,8 @@ MonoBehaviour:
   _frameRate: 24
   Begin: 0
   Speed: 0
+  IfPlayOnce: 0
+  FinishAni: 0
   _mapLoaded: 0
 --- !u!1 &245046208 stripped
 GameObject:
@@ -7303,6 +7305,8 @@ MonoBehaviour:
   _frameRate: 24
   Begin: 999
   Speed: -0.01
+  IfPlayOnce: 0
+  FinishAni: 0
   _mapLoaded: 0
 --- !u!1001 &917400542
 Prefab:
@@ -7367,12 +7371,12 @@ Prefab:
     - target: {fileID: 224000010424155464, guid: ef678e024a035a345a0ee0f3ea1f9a1c,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 800
+      value: 400
       objectReference: {fileID: 0}
     - target: {fileID: 224000010424155464, guid: ef678e024a035a345a0ee0f3ea1f9a1c,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 800
+      value: 400
       objectReference: {fileID: 0}
     - target: {fileID: 114000012970514554, guid: ef678e024a035a345a0ee0f3ea1f9a1c,
         type: 2}
@@ -15524,7 +15528,7 @@ Transform:
   m_LocalScale: {x: 0.5000001, y: -5.9200397, z: 6.159888}
   m_Children: []
   m_Father: {fileID: 1041143755}
-  m_RootOrder: 51
+  m_RootOrder: 52
   m_LocalEulerAnglesHint: {x: 330.15, y: 91.033005, z: -90.06901}
 --- !u!54 &1789183658
 Rigidbody:
@@ -19999,7 +20003,7 @@ Transform:
   m_LocalScale: {x: 0.5000001, y: -5.9200416, z: 6.159891}
   m_Children: []
   m_Father: {fileID: 1041143755}
-  m_RootOrder: 52
+  m_RootOrder: 53
   m_LocalEulerAnglesHint: {x: 291.016, y: 267.502, z: -267.223}
 --- !u!1 &2059117259
 GameObject:

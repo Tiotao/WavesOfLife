@@ -16,10 +16,10 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 4000011536598142}
-  - 114: {fileID: 114000011771309408}
+  - component: {fileID: 4000011536598142}
+  - component: {fileID: 114000011771309408}
   m_Layer: 0
   m_Name: RandomNameGenerator
   m_TagString: Untagged
@@ -36,10 +36,10 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 468, y: 238.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &114000011771309408
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -51,6 +51,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42420ec2a7c19364884429e6d60aacf5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TxtFile: {fileID: 4900000, guid: c85684b86b2c8254a8ec5f46596df39e, type: 3}
+  _EngNames: {fileID: 4900000, guid: 156935687ee34314f92e1979386bd0f5, type: 3}
+  _ChnSimpNames: {fileID: 4900000, guid: 56b5ee3248e92d34d80131f6acd97efa, type: 3}
+  _ChnTradNames: {fileID: 4900000, guid: 3c037272d3b5cce458403005ef3a9877, type: 3}
   LastNameField: {fileID: 0}
   test: 0

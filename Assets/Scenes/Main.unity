@@ -929,6 +929,8 @@ MonoBehaviour:
   _frameRate: 12
   Begin: 39
   Speed: 0
+  IfPlayOnce: 0
+  FinishAni: 0
   _mapLoaded: 0
 --- !u!1 &107001171 stripped
 GameObject:
@@ -3225,6 +3227,60 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 337448743}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &351681130
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 351681132}
+  - component: {fileID: 351681131}
+  m_Layer: 5
+  m_Name: Localization
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &351681131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 351681130}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9586445372aabad4bad8cedb8342f262, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _textMeshes: []
+  _texts:
+  - {fileID: 1156946677}
+  _chnSimpStrings:
+  - "\u4F60\u597D\uFF0C\u6B22\u8FCE\u6765\u5230\u8FD9\u4E2A\u4E16\u754C"
+  _chnTradStrings:
+  - "\u4F60\u597D\uFF0C\u6B61\u8FCE\u4F86\u5230\u9019\u500B\u4E16\u754C"
+  _engStrings:
+  - Welcome to this world, Stranger
+--- !u!224 &351681132
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 351681130}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 42
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 1250, y: 800}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &351887738
 Prefab:
   m_ObjectHideFlags: 0
@@ -6375,7 +6431,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 870257944}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6b4e704266436fb47a6495e9d18da8b8, type: 3}
   m_Name: 
@@ -6387,6 +6443,8 @@ MonoBehaviour:
   _frameRate: 12
   Begin: 0
   Speed: 0
+  IfPlayOnce: 0
+  FinishAni: 0
   _mapLoaded: 0
 --- !u!1 &878953344
 GameObject:
@@ -7030,42 +7088,6 @@ Prefab:
     - target: {fileID: 4000012254916020, guid: ef678e024a035a345a0ee0f3ea1f9a1c, type: 2}
       propertyPath: m_RootOrder
       value: 38
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000012970514554, guid: ef678e024a035a345a0ee0f3ea1f9a1c,
-        type: 2}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: be3fdc6f64280504e9eb397e41f44b46,
-        type: 3}
-    - target: {fileID: 114000012970514554, guid: ef678e024a035a345a0ee0f3ea1f9a1c,
-        type: 2}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000012970514554, guid: ef678e024a035a345a0ee0f3ea1f9a1c,
-        type: 2}
-      propertyPath: m_Color.g
-      value: 0.8117647
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000012970514554, guid: ef678e024a035a345a0ee0f3ea1f9a1c,
-        type: 2}
-      propertyPath: m_Color.b
-      value: 0.5735294
-      objectReference: {fileID: 0}
-    - target: {fileID: 224000010424155464, guid: ef678e024a035a345a0ee0f3ea1f9a1c,
-        type: 2}
-      propertyPath: m_SizeDelta.x
-      value: 800
-      objectReference: {fileID: 0}
-    - target: {fileID: 224000010424155464, guid: ef678e024a035a345a0ee0f3ea1f9a1c,
-        type: 2}
-      propertyPath: m_SizeDelta.y
-      value: 800
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000012970514554, guid: ef678e024a035a345a0ee0f3ea1f9a1c,
-        type: 2}
-      propertyPath: m_Color.a
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ef678e024a035a345a0ee0f3ea1f9a1c, type: 2}
@@ -8118,15 +8140,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 11
       objectReference: {fileID: 0}
-    - target: {fileID: 1000010303824716, guid: 6d82195bd90b6d74280948ce73ac48cb, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 198000013820151644, guid: 6d82195bd90b6d74280948ce73ac48cb,
-        type: 2}
-      propertyPath: randomSeed
-      value: 1111302400
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6d82195bd90b6d74280948ce73ac48cb, type: 2}
   m_IsPrefabParent: 0
@@ -8979,9 +8992,20 @@ Prefab:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114000010818360720, guid: 0fbbbaba079bd4b4b8c41e05c8054c3a,
+        type: 2}
+      propertyPath: m_Text
+      value: Welcome to this world, Stranger
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0fbbbaba079bd4b4b8c41e05c8054c3a, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &1156946677 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114000010818360720, guid: 0fbbbaba079bd4b4b8c41e05c8054c3a,
+    type: 2}
+  m_PrefabInternal: {fileID: 1156946676}
+  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
 --- !u!1 &1159464739 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1000011739877056, guid: 0fbbbaba079bd4b4b8c41e05c8054c3a,

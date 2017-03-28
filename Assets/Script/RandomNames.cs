@@ -4,7 +4,15 @@ using System.IO;
 
 public class RandomNames : MonoBehaviour {
 
-    public TextAsset TxtFile;   
+    
+    public TextAsset _EngNames;
+    public TextAsset _ChnSimpNames;
+
+    public TextAsset _ChnTradNames;
+    
+    TextAsset TxtFile;   
+
+
     private string Nametxt;       
     private ArrayList Namelist;
 
@@ -15,6 +23,14 @@ public class RandomNames : MonoBehaviour {
 
     // Use this for initialization
     void Awake () {
+        if (Application.systemLanguage == SystemLanguage.Chinese || Application.systemLanguage == SystemLanguage.ChineseSimplified) {
+            TxtFile = _ChnSimpNames;
+        } else if (Application.systemLanguage == SystemLanguage.ChineseTraditional) {
+            TxtFile = _ChnTradNames;
+        } else {
+            TxtFile = _EngNames;
+        }
+
         Namelist = new ArrayList(60);
 
         Nametxt = TxtFile.text;
