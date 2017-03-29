@@ -1906,6 +1906,7 @@ MonoBehaviour:
   Speed: 0
   IfPlayOnce: 0
   FinishAni: 0
+  _nameOffset: 0
   _mapLoaded: 0
 --- !u!1 &245046208 stripped
 GameObject:
@@ -3240,7 +3241,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Light: {fileID: 898428165}
   _camera: {fileID: 83635655}
-  _Time: 12
+  _Time: 11
   _Map: {fileID: 85289062}
   Mask: {fileID: 1374696135}
   Glow: {fileID: 174252915}
@@ -7307,6 +7308,7 @@ MonoBehaviour:
   Speed: -0.01
   IfPlayOnce: 0
   FinishAni: 0
+  _nameOffset: 0
   _mapLoaded: 0
 --- !u!1001 &917400542
 Prefab:

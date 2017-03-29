@@ -59,7 +59,7 @@ public class ContactEggEffect : MonoBehaviour {
 	void NameShow()
 	{
 		_Name.SetActive(true);
-		_BlackOverlay.FadeOut(2f, 7f);
+		// _BlackOverlay.FadeOut(2f, 7f);
 		Invoke ("ChangeScene",10.0f);
 	}
 

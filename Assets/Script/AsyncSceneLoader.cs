@@ -37,7 +37,7 @@ public class AsyncSceneLoader : MonoBehaviour {
         if (_isFading && t <= _effectDuration)
 		{
 			t = t + Time.deltaTime;
-			float intensity = Mathf.Lerp(0f, 1f, t);
+			float intensity = Mathf.Lerp(0f, 1f, t / _effectDuration);
 			// _camera.GetComponent<Camera>
 			_BlackOverlay.GetComponent<Image>().color = new Color(0, 0, 0, intensity);
 			_audio.volume = 1 - intensity;

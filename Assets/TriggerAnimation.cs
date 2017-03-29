@@ -6,9 +6,11 @@ public class TriggerAnimation : MonoBehaviour {
     public GameObject TreeAni;
     public bool ifset = false;
     public GameObject EndTrigger;
+
+    AsyncSceneLoader _async;
 	// Use this for initialization
 	void Start () {
-		
+		_async = GameObject.FindObjectOfType<AsyncSceneLoader>();
 	}
 	
 	// Update is called once per frame
@@ -17,6 +19,9 @@ public class TriggerAnimation : MonoBehaviour {
         {
             TreeAni.GetComponent<SpritesAnimation>().Begin = -1;
             ifset = true;
+            LevelAccess.SetLevel("2", true);
+            _async.ToSelectedScene(3);
+            Destroy(this);
         }
 	}
     private void OnTriggerEnter(Collider other)

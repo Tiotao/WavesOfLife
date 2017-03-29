@@ -77,7 +77,7 @@ public class lvl1End : MonoBehaviour {
 
     IEnumerator StartFading()
     {
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(2f);
         Invoke("StartEndingAni", 2f);
         _isFading = true;
     }

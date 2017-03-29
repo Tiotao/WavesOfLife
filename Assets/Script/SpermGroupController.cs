@@ -54,7 +54,7 @@ public class SpermGroupController : MonoBehaviour {
 	}
 
 	IEnumerator GameEnd() {
-		yield return new WaitForSeconds (5f);
+		yield return new WaitForSeconds (3f);
 		if (transform.childCount == 0) {
 			_isFading = true;
 		}
@@ -133,7 +133,7 @@ public class SpermGroupController : MonoBehaviour {
 
     IEnumerator GenerateFinalSperm()
     {
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(2f);
    //     Debug.Log("yay");
         SpawnLastSperm();
     }

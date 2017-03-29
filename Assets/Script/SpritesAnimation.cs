@@ -19,6 +19,8 @@ public class SpritesAnimation : MonoBehaviour {
     private  float timer=0;
     public bool IfPlayOnce=false;
     public bool FinishAni = false;
+
+    public int _nameOffset = 0;
     //  private float Begin = 39.0f;
     
     public bool _mapLoaded = false;
@@ -42,7 +44,7 @@ public class SpritesAnimation : MonoBehaviour {
 
     IEnumerator LoadMapFrame(int frame) {
         
-        string path = "Level" + _levelNumber + "_" + _spriteName + "/" + _spriteName + "_" +frame.ToString("00000");
+        string path = "Level" + _levelNumber + "_" + _spriteName + "/" + _spriteName + "_" + (frame+_nameOffset).ToString("00000");
         
         ResourceRequest req = Resources.LoadAsync<Sprite>(path);
         
