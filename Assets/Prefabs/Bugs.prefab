@@ -151,10 +151,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TimeStop: 0
-  Speed: 0.05
-  P1: {fileID: 21300000, guid: ff9321f4f61cff649b37a19ca5bc77d7, type: 3}
+  Speed: 0.03
+  P1: {fileID: 21300000, guid: b3eb2da7e7b0bb14881faee5c1b8024f, type: 3}
   P2: {fileID: 21300000, guid: 3b9877b9a02f32d4fbc6f17377d6fc24, type: 3}
-  P3: {fileID: 21300000, guid: b3eb2da7e7b0bb14881faee5c1b8024f, type: 3}
   _sprite: {fileID: 1000010212065584}
 --- !u!212 &212000011598239082
 SpriteRenderer:
