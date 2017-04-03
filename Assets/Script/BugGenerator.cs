@@ -7,24 +7,34 @@ public class BugGenerator : MonoBehaviour {
     private float timer=0f;
     public bool StopTime;
     public float BugsSpeed;
+
+    public Transform _endingPt;
+    public Transform _startingPt;
+    public Transform _midwayPt;
+
+    public int _maxInsects;
     // Use this for initialization
     void Start () {
-	
+
 	}
 
     // Update is called once per frame
     void Update() {
      //   this.transform.Translate(Vector3.up*Time.deltaTime);
-        if (!StopTime)
+        if (!StopTime && transform.childCount < _maxInsects)
         {
             timer += Time.deltaTime;
             if (timer >= RefreshTime)
             {
                 GameObject Tbug = GameObject.Instantiate(bug);
-                Tbug.transform.eulerAngles = this.transform.eulerAngles;
-                Tbug.transform.position = this.transform.position;
+                BugsAutoMove insectMotion = Tbug.GetComponent<BugsAutoMove>();
+                insectMotion._endingPt = _endingPt;
+                insectMotion._startingPt = _startingPt;
+                insectMotion._midwayPt = _midwayPt;
+                // Tbug.transform.eulerAngles = this.transform.eulerAngles;
+                // Tbug.transform.position = this.transform.position;
                 Tbug.transform.parent = this.transform;
-                Tbug.GetComponent<BugsAutoMove>().Speed =  BugsSpeed;
+                // Tbug.GetComponent<BugsAutoMove>().Speed =  BugsSpeed;
                 timer = 0;
             }
 

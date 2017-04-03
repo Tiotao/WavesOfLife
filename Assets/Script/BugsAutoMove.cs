@@ -18,15 +18,17 @@ public class BugsAutoMove : MonoBehaviour {
 
     public Transform _midwayPt;
 
+    Vector3 randomizedEnding;
+    Vector3 randomizedMidway;
+
     
 	// Use this for initialization
 	void Start () {
-        _endingPt = GameObject.Find("InsectsEndPoint").transform;
-        _startingPt = GameObject.Find("InsectsSpawnPoint").transform;
-        _midwayPt = GameObject.Find("InsectsSpawnPoint").transform;
+        
         transform.position = new Vector3(_startingPt.position.x + Random.Range(-5f, 5f), _startingPt.position.y + Random.Range(0f, 1f), _startingPt.position.z);
-        Vector3 randomizedEnding = new Vector3(_endingPt.position.x + Random.Range(-2f, 2f), _endingPt.position.y + Random.Range(0f, 1f), _endingPt.position.z);
-        Vector3 randomizedMidway = new Vector3(_midwayPt.position.x + Random.Range(-1f, 1f), _midwayPt.position.y + Random.Range(0f, 0f), _midwayPt.position.z);
+        randomizedEnding = new Vector3(_endingPt.position.x + Random.Range(-2f, 2f), _endingPt.position.y + Random.Range(0f, 1f), _endingPt.position.z);
+        randomizedMidway = new Vector3(_midwayPt.position.x + Random.Range(-1f, 1f), _midwayPt.position.y + Random.Range(0f, 0f), _midwayPt.position.z);
+        
 
         iTween.MoveTo(this.gameObject, iTween.Hash("path", new Vector3[]{randomizedMidway, randomizedEnding} , "time", Random.Range(6f, 8f), "oncomplete", "DestroyInsect", "movetopath", true, "orienttopath",true, "easetype", iTween.EaseType.linear));
 
@@ -46,8 +48,42 @@ public class BugsAutoMove : MonoBehaviour {
         // InitRotation = this.transform.eulerAngles;
     }
 
+    // void MoveDirectlyToEnd() {
+    //     iTween.MoveTo(this.gameObject, iTween.Hash("position", randomizedEnding , "speed", 1f, "oncomplete", "DestroyInsect", "movetopath", true, "orienttopath",true, "easetype", iTween.EaseType.linear));
+    // }
+
     void DestroyInsect () {
         Destroy(gameObject);
+    }
+
+    void OnTriggerEnter(Collider other) {
+        if (other.CompareTag("BUGSAVOID")) {
+            iTween.Stop(gameObject);
+            
+            
+            Vector3 avoiderPos = other.gameObject.transform.position;
+            Debug.Log(other.gameObject.transform.forward);
+            Debug.Log(transform.forward);
+            float angle = Vector3.Angle(transform.position - avoiderPos, other.gameObject.transform.forward);
+            float sideAngle = Vector3.Angle(transform.position - avoiderPos, other.gameObject.transform.right);
+            
+            Vector3 topTarget;
+            if (angle <= 90f) {
+                topTarget = new Vector3(avoiderPos.x + 6f, avoiderPos.y, randomizedEnding.z);
+            } else {
+                topTarget = new Vector3(avoiderPos.x - 6f, avoiderPos.y, randomizedEnding.z);
+            }
+
+            if (sideAngle <= 90f) {
+                topTarget = new Vector3(topTarget.x, topTarget.y + 3f * (sideAngle / 90), randomizedEnding.z);
+            } else {
+                topTarget = new Vector3(topTarget.x, topTarget.y + 3f * (sideAngle % 90 / 90), randomizedEnding.z);
+            }
+            
+            
+
+            iTween.MoveTo(this.gameObject, iTween.Hash("path", new Vector3[]{topTarget, randomizedEnding} , "speed", 8f, "oncomplete", "DestroyInsect", "movetopath", true, "orienttopath",true, "easetype", iTween.EaseType.linear));
+        }
     }
 	
 	// Update is called once per frame
