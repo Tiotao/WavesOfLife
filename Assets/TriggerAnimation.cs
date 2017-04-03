@@ -26,7 +26,7 @@ public class TriggerAnimation : MonoBehaviour {
 	}
     private void OnTriggerEnter(Collider other)
     {
-        if(other.CompareTag("Player"))
+        if(other.CompareTag("Player")|| other.CompareTag("BUGSAVOID"))
         {
             this.GetComponent<SpritesAnimation>().Begin = -1;
             EndTrigger.GetComponent<EndAnimationlvl2>().automove = false;

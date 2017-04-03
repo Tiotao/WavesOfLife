@@ -2118,7 +2118,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 272234955}
-  m_LocalRotation: {x: -0.34348705, y: -0.6213598, z: 0.6109878, w: 0.3501752}
+  m_LocalRotation: {x: -0.34348702, y: -0.62135977, z: 0.6109877, w: 0.35017517}
   m_LocalPosition: {x: 26.385, y: -4.408, z: 0.357}
   m_LocalScale: {x: 0.50000226, y: -5.920042, z: 3.0489688}
   m_Children: []
@@ -2508,8 +2508,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 305391231}
   m_LocalRotation: {x: 0.06029691, y: -0.70453125, z: 0.70453125, w: -0.060296915}
-  m_LocalPosition: {x: 0.397, y: 0.189, z: -0.31326532}
-  m_LocalScale: {x: 0.40897304, y: -6.0408773, z: 0.28361803}
+  m_LocalPosition: {x: 0.426, y: 0.018, z: -0.31326532}
+  m_LocalScale: {x: 0.40897304, y: -6.0408773, z: 0.5518804}
   m_Children:
   - {fileID: 1914249489}
   m_Father: {fileID: 591862144}
@@ -5899,7 +5899,7 @@ MeshRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 717762566}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_MotionVectors: 1
@@ -6643,7 +6643,7 @@ Transform:
   m_GameObject: {fileID: 783941643}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -38.21, y: 0, z: 0}
-  m_LocalScale: {x: 13.379002, y: 13.37899, z: 13.37899}
+  m_LocalScale: {x: 17.692745, y: 17.692734, z: 17.692734}
   m_Children: []
   m_Father: {fileID: 717762570}
   m_RootOrder: 0
@@ -7298,7 +7298,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 877687956}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -38.795, y: -0.15, z: -2.58}
+  m_LocalPosition: {x: -39.04, y: -0.15, z: -2.58}
   m_LocalScale: {x: 0.50000066, y: 0.5000007, z: 0.50000006}
   m_Children: []
   m_Father: {fileID: 0}
@@ -7687,7 +7687,7 @@ Prefab:
     - target: {fileID: 114000012026085146, guid: 3d6d8b1c222642b43a5f2d0ce6c2bb35,
         type: 2}
       propertyPath: _minInstanceScale
-      value: 0.5
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 114000012026085146, guid: 3d6d8b1c222642b43a5f2d0ce6c2bb35,
         type: 2}
@@ -7697,7 +7697,7 @@ Prefab:
     - target: {fileID: 114000012026085146, guid: 3d6d8b1c222642b43a5f2d0ce6c2bb35,
         type: 2}
       propertyPath: _initSpermAmount
-      value: 5
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3d6d8b1c222642b43a5f2d0ce6c2bb35, type: 2}
@@ -12042,8 +12042,8 @@ Material:
         name: _AlphaTex
       second:
         m_Texture: {fileID: 2800000, guid: 95ef4804fe0be4c999ddaa383536cde8, type: 3}
-        m_Scale: {x: 0.07474399, y: 0.07474405}
-        m_Offset: {x: 3.355968, y: 0.5}
+        m_Scale: {x: 0.056520343, y: 0.056520376}
+        m_Offset: {x: 2.6596422, y: 0.5}
     - first:
         name: _DecalTex
       second:
@@ -12650,7 +12650,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1710672403}
   m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 117.06331, y: 0, z: 0}
+  m_LocalPosition: {x: 75.6, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
