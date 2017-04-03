@@ -8,6 +8,7 @@ public class EndAnimationlvl2 : MonoBehaviour {
     public GameObject Player;
     public GameObject cam;
     public bool automove;
+    public GameObject LeafGroup;
 	// Use this for initialization
 	void Start () {
 		
@@ -26,6 +27,7 @@ public class EndAnimationlvl2 : MonoBehaviour {
         if(other.CompareTag("Player"))
         {
             SnakeHead.GetComponent<SpritesAnimation>().Begin = -1;
+            LeafGroup.GetComponent<Animator>().SetTrigger("PlayAni");
             GameObject.FindGameObjectWithTag("Player").GetComponent<AutoMove>().lvl1End = true;
             Invoke("AfterEndAni", 2.0f);
         }
