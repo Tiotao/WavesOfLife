@@ -3,6 +3,8 @@
 	Properties
 	{
 		_MainTex ("Texture", 2D) = "white" {}
+		// _NoiseTex ("Noise Texture", 2D) = "white" {}
+		// _DistortionAmount ("Distortion Amount", Float) = 0
 	}
 	SubShader
 	{
@@ -38,10 +40,23 @@
 			}
 			
 			sampler2D _MainTex;
+			// sampler2D _NoiseTex;
+			// float _DistortionAmount;
 
 			fixed4 frag (v2f i) : SV_Target
 			{
-				fixed4 col = tex2D(_MainTex, i.uv + float2(sin(i.vertex.x/50 + _Time[1] / 2) / 50, sin(i.vertex.y/50 + _Time[1] / 2) / 50));
+				
+				float2 offset = float2( (sin(i.vertex.y/100 + _Time[1] / 2)) / 100, 
+										(sin(i.vertex.x/100 + _Time[1] / 2)) / 100);
+
+				// float2 offset = float2(
+				// 	tex2D(_NoiseTex, float2(i.vertex.y / 10000 * _DistortionAmount, _Time[1] / 1000)).r, 
+				// 	tex2D(_NoiseTex, float2(_Time[1] / 1000, i.vertex.x / 10000 * _DistortionAmount)).r
+				// );
+
+				// offset -= 0.5;
+				
+				fixed4 col = tex2D(_MainTex, i.uv + offset);
 				
 				return col;
 			}
