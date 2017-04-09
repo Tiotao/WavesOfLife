@@ -18,6 +18,9 @@ public class BugsAutoMove : MonoBehaviour {
 
     public Transform _midwayPt;
 
+    //range of random start position
+    public float Xrange;
+
     Vector3 randomizedEnding;
     Vector3 randomizedMidway;
 
@@ -25,7 +28,7 @@ public class BugsAutoMove : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         
-        transform.position = new Vector3(_startingPt.position.x + Random.Range(-5f, 5f), _startingPt.position.y + Random.Range(0f, 1f), _startingPt.position.z);
+        transform.position = new Vector3(_startingPt.position.x + Random.Range(-Xrange, Xrange), _startingPt.position.y + Random.Range(0f, 1f), _startingPt.position.z);
         randomizedEnding = new Vector3(_endingPt.position.x + Random.Range(-2f, 2f), _endingPt.position.y + Random.Range(0f, 1f), _endingPt.position.z);
         randomizedMidway = new Vector3(_midwayPt.position.x + Random.Range(-1f, 1f), _midwayPt.position.y + Random.Range(0f, 0f), _midwayPt.position.z);
         

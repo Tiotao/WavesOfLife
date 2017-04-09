@@ -7,6 +7,7 @@ public class SpeedDown : MonoBehaviour {
     public GameObject[] Bugs;
     public GameObject BGanimation;
     public GameObject SnakeAnimation;
+    public GameObject picture;
     // Use this for initialization
     void Start () {
 		
@@ -20,6 +21,7 @@ public class SpeedDown : MonoBehaviour {
     {
         if (other.CompareTag("Player"))
         {
+            picture.GetComponent<SpriteRenderer>().enabled = false;
             for (int i = 0; i < BugGenerators.Length; i++)
             {
                 BugGenerators[i].GetComponent<BugGenerator>().StopTime = true;

@@ -25,6 +25,9 @@ public class AutoMove : MonoBehaviour {
 	public bool ZoomIn;
     private float _V = 0;
     public bool lvl1End=false;
+    public float ZoomOutValue;
+    public float ZoomInValue;
+
     // sound effect
     private AudioSource _audio;
     
@@ -41,14 +44,14 @@ public class AutoMove : MonoBehaviour {
 	void Update () {
 
 		if (ZoomOut) {
-			_C.orthographicSize =  Mathf.SmoothDamp(_C.orthographicSize,7.0f,ref _V,0.5f);
-			if (_C.orthographicSize == 7) {
+			_C.orthographicSize =  Mathf.SmoothDamp(_C.orthographicSize, ZoomOutValue, ref _V,0.5f);
+			if (_C.orthographicSize == ZoomOutValue) {
 				ZoomOut = false;
 			}
 		}
 		if (ZoomIn) {
-			_C.orthographicSize =  Mathf.SmoothDamp(_C.orthographicSize,4.0f,ref _V,0.5f);
-			if (_C.orthographicSize == 4) {
+			_C.orthographicSize =  Mathf.SmoothDamp(_C.orthographicSize, ZoomInValue, ref _V,0.5f);
+			if (_C.orthographicSize == ZoomInValue) {
 				ZoomIn = false;
 			}
 		}
