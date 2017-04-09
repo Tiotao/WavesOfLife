@@ -931,6 +931,7 @@ MonoBehaviour:
   Speed: 0
   IfPlayOnce: 0
   FinishAni: 0
+  _nameOffset: 0
   _mapLoaded: 0
 --- !u!1 &107001171 stripped
 GameObject:
@@ -1896,6 +1897,8 @@ MonoBehaviour:
   ZoomOut: 0
   ZoomIn: 0
   lvl1End: 0
+  ZoomOutValue: 7
+  ZoomInValue: 4
 --- !u!54 &218765211
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -6445,6 +6448,7 @@ MonoBehaviour:
   Speed: 0
   IfPlayOnce: 0
   FinishAni: 0
+  _nameOffset: 0
   _mapLoaded: 0
 --- !u!1 &878953344
 GameObject:

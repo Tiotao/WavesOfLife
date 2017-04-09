@@ -11,6 +11,7 @@ public class BugGenerator : MonoBehaviour {
     public Transform _endingPt;
     public Transform _startingPt;
     public Transform _midwayPt;
+    public float MaxRandomRange_x;
 
     public int _maxInsects;
     // Use this for initialization
@@ -31,6 +32,7 @@ public class BugGenerator : MonoBehaviour {
                 insectMotion._endingPt = _endingPt;
                 insectMotion._startingPt = _startingPt;
                 insectMotion._midwayPt = _midwayPt;
+                insectMotion.Xrange = MaxRandomRange_x;
                 // Tbug.transform.eulerAngles = this.transform.eulerAngles;
                 // Tbug.transform.position = this.transform.position;
                 Tbug.transform.parent = this.transform;
