@@ -6,7 +6,7 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: SnakeDistortion
+  m_Name: SnakeLight
   m_Shader: {fileID: 4800000, guid: 5a97d01cb331f8c43bc4f162c1363c89, type: 3}
   m_ShaderKeywords: _EMISSION
   m_LightmapFlags: 1
@@ -111,7 +111,7 @@ Material:
       second: 0.02
     - first:
         name: _Shine
-      second: 0
+      second: 1
     - first:
         name: _SmoothnessTextureChannel
       second: 0

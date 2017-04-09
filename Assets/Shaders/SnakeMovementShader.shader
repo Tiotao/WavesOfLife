@@ -1,4 +1,4 @@
-Shader "Custom/Snake"
+Shader "Custom/SnakeLight"
 {
 	Properties
 	{
@@ -6,6 +6,7 @@ Shader "Custom/Snake"
 		_Color ("Tint", Color) = (1,1,1,1)
 		[MaterialToggle] PixelSnap ("Pixel snap", Float) = 0
 		_Distortion("Distortion", Float) = 0
+		_Shine("Is Shining", Float) = 0
 	}
 
 	SubShader
@@ -71,6 +72,7 @@ Shader "Custom/Snake"
 			sampler2D _AlphaTex;
 
 			float _Distortion;
+			float _Shine;
 
 			fixed4 SampleSpriteTexture (float2 uv)
 			{
@@ -88,9 +90,14 @@ Shader "Custom/Snake"
 			{
 				float2 offset = float2( (sin(IN.vertex.y/100 + _Time[1] / 2)) / 100 * _Distortion, 
 										(sin(IN.vertex.x/100 + _Time[1] / 2)) / 100 * _Distortion);
+										
 				
 				fixed4 c = SampleSpriteTexture (IN.texcoord + offset) * IN.color;
-				c.rgb *= c.a;
+
+				c.a = ( 1 - sin(_Time[1] * _Shine)) * c.a;
+				
+
+				c.rgb *= (c.a);
 				return c;
 			}
 		ENDCG
