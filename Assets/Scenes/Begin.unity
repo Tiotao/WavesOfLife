@@ -5596,6 +5596,8 @@ MonoBehaviour:
   ZoomOut: 0
   ZoomIn: 0
   lvl1End: 0
+  ZoomOutValue: 0
+  ZoomInValue: 0
 --- !u!23 &1640897498
 MeshRenderer:
   m_ObjectHideFlags: 0

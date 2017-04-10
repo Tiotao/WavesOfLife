@@ -22,6 +22,7 @@ public class AsyncSceneLoader : MonoBehaviour {
     // Use this for initialization
     void Start () {
         _audio = GameObject.Find ("BackgroundMusic").GetComponent<AudioSource> ();
+        
     }
 	
 	// Update is called once per frame
@@ -33,6 +34,15 @@ public class AsyncSceneLoader : MonoBehaviour {
         // if (_isAllowingFade && !_isFading) {
         //     StartCoroutine(FadeToBlack());
         // }
+
+        if (Input.GetKeyDown(KeyCode.Escape)) {
+            if (SceneManager.GetActiveScene().buildIndex == 4) {
+                Application.Quit();
+            } else {
+                ToSelectedScene(4); 
+            }
+            
+        }
 
         if (_isFading && t <= _effectDuration)
 		{
@@ -54,7 +64,6 @@ public class AsyncSceneLoader : MonoBehaviour {
     public void ToSelectedScene(int sceneIndex) {
         StartCoroutine(Load(sceneIndex));
     }
-
 
 
     IEnumerator Load(int sceneIndex) {
