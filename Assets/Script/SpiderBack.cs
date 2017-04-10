@@ -27,6 +27,8 @@ public class SpiderBack : MonoBehaviour {
                 {
                     Spider.GetComponent<Animator>().SetTrigger("TrigSpider");
                     Spider.GetComponent<SpiderStatus>().IsActive = true;
+                    if (!this.GetComponent<AudioSource>().isPlaying)
+                        this.GetComponent<AudioSource>().Play();
                 }
                 else
                 {
@@ -37,7 +39,7 @@ public class SpiderBack : MonoBehaviour {
     }
     private void triggerAnimation()
     {
-        this.GetComponent<AudioSource>().Play();
+        
         Spider.GetComponent<Animator>().SetTrigger("TrigSpider");
         Spider.GetComponent<SpiderStatus>().IsActive = true;
     }
