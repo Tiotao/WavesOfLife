@@ -43,11 +43,11 @@
 			// sampler2D _NoiseTex;
 			// float _DistortionAmount;
 
-			fixed4 frag (v2f i) : SV_Target
+			fixed4 frag (v2f IN) : SV_Target
 			{
 				
-				float2 offset = float2( (sin(i.vertex.y/100 + _Time[1] / 2)) / 100, 
-										(sin(i.vertex.x/100 + _Time[1] / 2)) / 100);
+				float2 offset = float2( (sin(IN.vertex.y/100 + _Time[1] / 2)) / 100, 
+										(sin(IN.vertex.x/100 + _Time[1] / 2)) / 100);
 
 				// float2 offset = float2(
 				// 	tex2D(_NoiseTex, float2(i.vertex.y / 10000 * _DistortionAmount, _Time[1] / 1000)).r, 
@@ -56,7 +56,9 @@
 
 				// offset -= 0.5;
 				
-				fixed4 col = tex2D(_MainTex, i.uv + offset);
+				fixed4 col = tex2D(_MainTex, IN.uv + offset);
+
+				// fixed4 col = tex2D(_MainTex, IN.uv);
 				
 				return col;
 			}

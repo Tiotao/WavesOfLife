@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[ExecuteInEditMode]
 public class WaterCameraEffect : MonoBehaviour {
 
 	// Use this for initialization
@@ -13,8 +12,12 @@ public class WaterCameraEffect : MonoBehaviour {
 	/// </summary>
 	/// <param name="src">The source RenderTexture.</param>
 	/// <param name="dest">The destination RenderTexture.</param>
+#if !UNITY_EDITOR	
 	void OnRenderImage(RenderTexture src, RenderTexture dest)
 	{
 		Graphics.Blit(src, dest, mat);
 	}
+
+#endif
+
 }

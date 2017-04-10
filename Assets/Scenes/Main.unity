@@ -10110,7 +10110,7 @@ Prefab:
     - target: {fileID: 114000012026085146, guid: 3d6d8b1c222642b43a5f2d0ce6c2bb35,
         type: 2}
       propertyPath: _levelNumber
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 114000012026085146, guid: 3d6d8b1c222642b43a5f2d0ce6c2bb35,
         type: 2}

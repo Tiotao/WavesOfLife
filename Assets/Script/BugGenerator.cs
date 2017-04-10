@@ -42,4 +42,10 @@ public class BugGenerator : MonoBehaviour {
 
          }
     }
+
+    void OnTriggerEnter(Collider other) {
+        if (other.CompareTag("BUGSAVOID")) {
+            _endingPt = _startingPt;
+        }
+    }
 }

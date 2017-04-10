@@ -9,6 +9,9 @@ public class EndAnimationlvl2 : MonoBehaviour {
     public GameObject cam;
     public bool automove;
     public GameObject LeafGroup;
+
+    public SpermGroupController _player;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -30,6 +33,7 @@ public class EndAnimationlvl2 : MonoBehaviour {
             LeafGroup.GetComponent<Animator>().SetTrigger("PlayAni");
             GameObject.FindGameObjectWithTag("Player").GetComponent<AutoMove>().lvl1End = true;
             Invoke("AfterEndAni", 2.0f);
+            _player.LeftOne();
         }
     }
     private void AfterEndAni()

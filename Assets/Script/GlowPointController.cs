@@ -13,6 +13,8 @@ public class GlowPointController : MonoBehaviour {
     public float _pathTime = 3f;
     public GameObject _finalFish;
 
+    public bool _pathStarted = false;
+
 	// Use this for initialization
 	void Start () {
 
@@ -37,7 +39,7 @@ public class GlowPointController : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
-       if (_updatePath)
+       if (_updatePath && _currentPath < _glowPathWayPoints.Count)
         {
             Transform[] path = _glowPathWayPoints[_currentPath];
 
@@ -98,7 +100,9 @@ public class GlowPointController : MonoBehaviour {
     void AttachToFinalFish()
     {
 
-        _glowPoint.transform.parent = _finalFish.transform;
+        if(_finalFish) {
+            _glowPoint.transform.parent = _finalFish.transform;
+        }
         
     }
 

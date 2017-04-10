@@ -33,7 +33,7 @@ public class BugsAutoMove : MonoBehaviour {
         randomizedMidway = new Vector3(_midwayPt.position.x + Random.Range(-1f, 1f), _midwayPt.position.y + Random.Range(0f, 0f), _midwayPt.position.z);
         
 
-        iTween.MoveTo(this.gameObject, iTween.Hash("path", new Vector3[]{randomizedMidway, randomizedEnding} , "time", Random.Range(6f, 8f), "oncomplete", "DestroyInsect", "movetopath", true, "orienttopath",true, "easetype", iTween.EaseType.linear));
+        iTween.MoveTo(this.gameObject, iTween.Hash("path", new Vector3[]{randomizedMidway, randomizedEnding} , "time", Random.Range(4f, 6f), "oncomplete", "DestroyInsect", "movetopath", true, "orienttopath",true, "easetype", iTween.EaseType.linear));
 
         float rand = Random.Range(0, 4);
         float randomSizeFactor = Random.Range(1f, 1.5f);
@@ -60,33 +60,33 @@ public class BugsAutoMove : MonoBehaviour {
     }
 
     void OnTriggerEnter(Collider other) {
-        if (other.CompareTag("BUGSAVOID")) {
-            iTween.Stop(gameObject);
+        // if (other.CompareTag("BUGSAVOID")) {
+        //     iTween.Stop(gameObject);
             
             
-            Vector3 avoiderPos = other.gameObject.transform.position;
-            Debug.Log(other.gameObject.transform.forward);
-            Debug.Log(transform.forward);
-            float angle = Vector3.Angle(transform.position - avoiderPos, other.gameObject.transform.forward);
-            float sideAngle = Vector3.Angle(transform.position - avoiderPos, other.gameObject.transform.right);
+        //     Vector3 avoiderPos = other.gameObject.transform.position;
+        //     Debug.Log(other.gameObject.transform.forward);
+        //     Debug.Log(transform.forward);
+        //     float angle = Vector3.Angle(transform.position - avoiderPos, other.gameObject.transform.forward);
+        //     float sideAngle = Vector3.Angle(transform.position - avoiderPos, other.gameObject.transform.right);
             
-            Vector3 topTarget;
-            if (angle <= 90f) {
-                topTarget = new Vector3(avoiderPos.x + 6f, avoiderPos.y, randomizedEnding.z);
-            } else {
-                topTarget = new Vector3(avoiderPos.x - 6f, avoiderPos.y, randomizedEnding.z);
-            }
+        //     Vector3 topTarget;
+        //     if (angle <= 90f) {
+        //         topTarget = new Vector3(avoiderPos.x + 6f, avoiderPos.y, randomizedEnding.z);
+        //     } else {
+        //         topTarget = new Vector3(avoiderPos.x - 6f, avoiderPos.y, randomizedEnding.z);
+        //     }
 
-            if (sideAngle <= 90f) {
-                topTarget = new Vector3(topTarget.x, topTarget.y + 3f * (sideAngle / 90), randomizedEnding.z);
-            } else {
-                topTarget = new Vector3(topTarget.x, topTarget.y + 3f * (sideAngle % 90 / 90), randomizedEnding.z);
-            }
+        //     if (sideAngle <= 90f) {
+        //         topTarget = new Vector3(topTarget.x, topTarget.y + 3f * (sideAngle / 90), randomizedEnding.z);
+        //     } else {
+        //         topTarget = new Vector3(topTarget.x, topTarget.y + 3f * (sideAngle % 90 / 90), randomizedEnding.z);
+        //     }
             
             
 
-            iTween.MoveTo(this.gameObject, iTween.Hash("path", new Vector3[]{topTarget, randomizedEnding} , "speed", 8f, "oncomplete", "DestroyInsect", "movetopath", true, "orienttopath",true, "easetype", iTween.EaseType.linear));
-        }
+        //     iTween.MoveTo(this.gameObject, iTween.Hash("path", new Vector3[]{topTarget, randomizedEnding} , "speed", 8f, "oncomplete", "DestroyInsect", "movetopath", true, "orienttopath",true, "easetype", iTween.EaseType.linear));
+        // }
     }
 	
 	// Update is called once per frame

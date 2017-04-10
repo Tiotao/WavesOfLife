@@ -106,7 +106,7 @@ public class SpermGroupController : MonoBehaviour {
         sperm.transform.localPosition = new Vector3(0, 0, 0);
         sperm.transform.localEulerAngles = new Vector3(0, 90, 90);
 
-        if (_levelNumber == 1)
+        if (_levelNumber == 3)
         {
             sperm.transform.localScale = new Vector3(0.3f, 0.3f, 0.3f);
             sperm.transform.Find("Glow").localScale = new Vector3(1.5f, 1.5f, 1.5f);
@@ -115,9 +115,23 @@ public class SpermGroupController : MonoBehaviour {
             sperm.transform.Find("SpermTail").GetComponent<TrailRenderer>().time = 2f;
         }
 
-        if (_levelNumber == 2)
+        if (_levelNumber == 1)
         {
             sperm.transform.localScale = new Vector3(0.7f, 0.7f, 0.7f);
+        }
+
+        if (_levelNumber == 2)
+        {
+            sperm.transform.localScale = new Vector3(1.5f, 1.5f, 1.5f);
+            ParticleSystem Dandelion = sperm.transform.Find("Dandelion").GetComponent<ParticleSystem>();
+            Dandelion.startSize = 2f;
+            Dandelion.startSpeed = 0.5f;
+            Dandelion.startLifetime = 2f;
+            Dandelion.maxParticles = 150;
+            Dandelion.emissionRate = 25;
+            sperm.transform.Find("Trace").GetComponent<ParticleSystem>().startSize = 0.2f;
+
+            
         }
         
     }
