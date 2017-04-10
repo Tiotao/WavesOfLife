@@ -9,7 +9,7 @@ public class EndAnimationlvl2 : MonoBehaviour {
     public GameObject cam;
     public bool automove;
     public GameObject LeafGroup;
-
+    public GameObject Overlay;
     public SpermGroupController _player;
 
 	// Use this for initialization
@@ -32,7 +32,9 @@ public class EndAnimationlvl2 : MonoBehaviour {
             SnakeHead.GetComponent<SpritesAnimation>().Begin = -1;
             LeafGroup.GetComponent<Animator>().SetTrigger("PlayAni");
             GameObject.FindGameObjectWithTag("Player").GetComponent<AutoMove>().lvl1End = true;
-            Invoke("AfterEndAni", 2.0f);
+            Invoke("AfterEndAni", 4.0f);
+            Overlay.GetComponent<FadeInWhenBeginning>().FadeOut(1.0f,1.5f);
+            Overlay.GetComponent<FadeInWhenBeginning>().FadeIn(1.0f, 5.0f);
             _player.LeftOne();
         }
     }
