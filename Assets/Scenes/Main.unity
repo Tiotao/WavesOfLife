@@ -9001,6 +9001,46 @@ Prefab:
       propertyPath: m_Text
       value: Welcome to this world, Stranger
       objectReference: {fileID: 0}
+    - target: {fileID: 224729129810386660, guid: 0fbbbaba079bd4b4b8c41e05c8054c3a,
+        type: 2}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 224000014291654250, guid: 0fbbbaba079bd4b4b8c41e05c8054c3a,
+        type: 2}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 224000010142243612, guid: 0fbbbaba079bd4b4b8c41e05c8054c3a,
+        type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000013915906344, guid: 0fbbbaba079bd4b4b8c41e05c8054c3a,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114397594093032924, guid: 0fbbbaba079bd4b4b8c41e05c8054c3a,
+        type: 2}
+      propertyPath: m_FontData.m_FontSize
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 114397594093032924, guid: 0fbbbaba079bd4b4b8c41e05c8054c3a,
+        type: 2}
+      propertyPath: m_FontData.m_MinSize
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224729129810386660, guid: 0fbbbaba079bd4b4b8c41e05c8054c3a,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 1026
+      objectReference: {fileID: 0}
+    - target: {fileID: 224729129810386660, guid: 0fbbbaba079bd4b4b8c41e05c8054c3a,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -670
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0fbbbaba079bd4b4b8c41e05c8054c3a, type: 2}
   m_IsPrefabParent: 0

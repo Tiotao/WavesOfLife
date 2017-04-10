@@ -79,6 +79,7 @@ public class AsyncSceneLoader : MonoBehaviour {
             yield return null;
         }
         _isFading = true;
+        _BlackOverlay.GetComponent<FadeInWhenBeginning>().FadeOut(2f, 0f);
         yield return new WaitForSeconds(2f);
         a.allowSceneActivation = true;
         
