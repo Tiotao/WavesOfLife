@@ -14,6 +14,9 @@ public class BugGenerator : MonoBehaviour {
     public float MaxRandomRange_x;
 
     public int _maxInsects;
+
+    
+
     // Use this for initialization
     void Start () {
 

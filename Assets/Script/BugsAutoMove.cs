@@ -55,67 +55,10 @@ public class BugsAutoMove : MonoBehaviour {
     //     iTween.MoveTo(this.gameObject, iTween.Hash("position", randomizedEnding , "speed", 1f, "oncomplete", "DestroyInsect", "movetopath", true, "orienttopath",true, "easetype", iTween.EaseType.linear));
     // }
 
+
+    
     void DestroyInsect () {
         Destroy(gameObject);
     }
 
-    void OnTriggerEnter(Collider other) {
-        // if (other.CompareTag("BUGSAVOID")) {
-        //     iTween.Stop(gameObject);
-            
-            
-        //     Vector3 avoiderPos = other.gameObject.transform.position;
-        //     Debug.Log(other.gameObject.transform.forward);
-        //     Debug.Log(transform.forward);
-        //     float angle = Vector3.Angle(transform.position - avoiderPos, other.gameObject.transform.forward);
-        //     float sideAngle = Vector3.Angle(transform.position - avoiderPos, other.gameObject.transform.right);
-            
-        //     Vector3 topTarget;
-        //     if (angle <= 90f) {
-        //         topTarget = new Vector3(avoiderPos.x + 6f, avoiderPos.y, randomizedEnding.z);
-        //     } else {
-        //         topTarget = new Vector3(avoiderPos.x - 6f, avoiderPos.y, randomizedEnding.z);
-        //     }
-
-        //     if (sideAngle <= 90f) {
-        //         topTarget = new Vector3(topTarget.x, topTarget.y + 3f * (sideAngle / 90), randomizedEnding.z);
-        //     } else {
-        //         topTarget = new Vector3(topTarget.x, topTarget.y + 3f * (sideAngle % 90 / 90), randomizedEnding.z);
-        //     }
-            
-            
-
-        //     iTween.MoveTo(this.gameObject, iTween.Hash("path", new Vector3[]{topTarget, randomizedEnding} , "speed", 8f, "oncomplete", "DestroyInsect", "movetopath", true, "orienttopath",true, "easetype", iTween.EaseType.linear));
-        // }
-    }
-	
-	// Update is called once per frame
-	void Update () {
-
-        
-      
-        // if (!TimeStop)
-        //     this.transform.Translate(Vector3.up * Time.deltaTime*60f*Speed);
-
-        // timer += Time.deltaTime;
-        // if(timer>=0.5f)
-        // {
-        //     RanDirection = Random.Range(-10, 10);
-
-        //     InitRotation = this.transform.eulerAngles;
-        //     timer = 0;
-        // }
-
-        // if (Mathf.Abs(this.transform.eulerAngles.z - InitRotation.z) < Mathf.Abs(RanDirection))
-        // {
-        //     if(RanDirection>=0)
-        //         this.transform.Rotate(new Vector3(0, 0, 1));
-        //     else
-        //     {
-        //         this.transform.Rotate(new Vector3(0, 0, -1));
-        //         Debug.Log("-1");
-        //     }
-        // }
-
-    }
 }

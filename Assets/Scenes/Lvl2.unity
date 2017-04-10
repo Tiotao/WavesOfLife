@@ -7922,7 +7922,7 @@ Prefab:
     - target: {fileID: 114000012026085146, guid: 3d6d8b1c222642b43a5f2d0ce6c2bb35,
         type: 2}
       propertyPath: _initSpermAmount
-      value: 12
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 114000012026085146, guid: 3d6d8b1c222642b43a5f2d0ce6c2bb35,
         type: 2}
@@ -12223,7 +12223,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1000011855131864, guid: 895cb01cc6c9f0443b4d8a09afe8b0ad, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 198000011154127596, guid: 895cb01cc6c9f0443b4d8a09afe8b0ad,
         type: 2}
