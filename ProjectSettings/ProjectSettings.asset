@@ -122,7 +122,7 @@ PlayerSettings:
     16:9: 1
     Others: 1
   bundleIdentifier: com.SBG.WavesOfLife
-  bundleVersion: 0.3.2
+  bundleVersion: 0.3.3
   preloadedAssets: []
   metroInputSource: 0
   m_HolographicPauseOnTrackingLoss: 1

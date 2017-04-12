@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class BugGenerator : MonoBehaviour {
     public GameObject bug;
@@ -7,6 +8,8 @@ public class BugGenerator : MonoBehaviour {
     private float timer=0f;
     public bool StopTime;
     public float BugsSpeed;
+
+    public List<BugsAutoMove> insects;
 
     public Transform _endingPt;
     public Transform _startingPt;
@@ -41,14 +44,20 @@ public class BugGenerator : MonoBehaviour {
                 Tbug.transform.parent = this.transform;
                 // Tbug.GetComponent<BugsAutoMove>().Speed =  BugsSpeed;
                 timer = 0;
+                insects.Add(insectMotion);
             }
 
          }
     }
 
+    
+
     void OnTriggerEnter(Collider other) {
         if (other.CompareTag("BUGSAVOID")) {
             _endingPt = _startingPt;
+            foreach(BugsAutoMove i in insects) {
+                i._endingPt = _endingPt;
+            }
         }
     }
 }

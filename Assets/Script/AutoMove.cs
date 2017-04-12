@@ -136,6 +136,19 @@ public class AutoMove : MonoBehaviour {
 
         }
 
+        if (col.CompareTag("SPEED2")) {
+			_audio.Play ();
+            Speed = 0.1f;
+            ZoomOut = true;
+            HasSpeedUp = true;
+            //  UnityStandardAssets.ImageEffects.
+            _C.GetComponent<UnityStandardAssets.ImageEffects.MotionBlur>().enabled = true;
+            _C.GetComponent<UnityStandardAssets.ImageEffects.MotionBlur>().blurAmount = 0.9f;
+            StartCoroutine(BackToOrigin(1.5f));
+
+
+        }
+
        
         
     }

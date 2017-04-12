@@ -15,6 +15,8 @@ public class Lvl1EndingAnimation : MonoBehaviour {
 
     public AsyncSceneLoader _AsyncSceneLoader;
 
+    
+
     bool _startFading = false;
 	// Use this for initialization
 	void Start () {
@@ -22,6 +24,7 @@ public class Lvl1EndingAnimation : MonoBehaviour {
         Light.GetComponent<SpritesAnimation>().Begin = 0f;
         Mask.SetActive(true);
         Glow.SetActive(true);
+        Camera.main.GetComponent<WaterCameraEffect>().enabled = false;
         for(int i=0;i<FlowBugs.Length;i++)
         {
             FlowBugs[i].GetComponent<FlowBugsMove>().BeginMove = true;

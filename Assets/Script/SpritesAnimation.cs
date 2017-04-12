@@ -9,10 +9,12 @@ public class SpritesAnimation : MonoBehaviour {
     // public string _spriteFileHeader = "level1";
     public string _spriteName = "";
     public string _levelNumber = "0";
+
+    public int _startFrame = 0;
     public int _frameNumber = 45;
     public int _frameRate = 12;
     public float Begin = 0f;
-    private int i = 0;
+    private int i;
     private float counter;
     private bool set;
     public float Speed;
@@ -30,10 +32,11 @@ public class SpritesAnimation : MonoBehaviour {
 
     void Awake() {
         Application.backgroundLoadingPriority = ThreadPriority.Low;
+        i = _startFrame;
     }
     void Start()
     {
-        for(int i = 0; i <= _frameNumber; i++) {
+        for(int i = _startFrame; i <= _frameNumber; i++) {
             StartCoroutine(LoadMapFrame(i));
         }
         
@@ -100,11 +103,11 @@ public class SpritesAnimation : MonoBehaviour {
                 }
                 counter = 1f / _frameRate;
 
-                if (i >= _frameNumber&&!IfPlayOnce)
+                if (i >= (_frameNumber - _startFrame) && !IfPlayOnce)
                 {
                     reverse = true;
                 }
-                else if(i >= _frameNumber && IfPlayOnce)
+                else if(i >= (_frameNumber - _startFrame) && IfPlayOnce)
                 {
                     //this.enabled = false;
                     Begin = 100;

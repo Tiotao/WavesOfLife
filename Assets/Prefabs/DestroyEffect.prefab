@@ -171,6 +171,9 @@ MonoBehaviour:
   _name: 
   _target: {fileID: 0}
   _camera: {fileID: 0}
+  _chnSimpFont: {fileID: 12800000, guid: 39538771da40bfa4a8294773b5304edf, type: 3}
+  _chnTradFont: {fileID: 12800000, guid: 100b581ce2acda8409d52aa8c8b33d1c, type: 3}
+  _engFont: {fileID: 12800000, guid: dff96dc21644a0e47b8232edcb804d6f, type: 3}
 --- !u!198 &198000013820151644
 ParticleSystem:
   m_ObjectHideFlags: 1

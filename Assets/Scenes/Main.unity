@@ -925,6 +925,7 @@ MonoBehaviour:
   BG: []
   _spriteName: 
   _levelNumber: 0
+  _startFrame: 0
   _frameNumber: 45
   _frameRate: 12
   Begin: 39
@@ -938,6 +939,12 @@ GameObject:
   m_PrefabParentObject: {fileID: 1686685675039340, guid: 0fbbbaba079bd4b4b8c41e05c8054c3a,
     type: 2}
   m_PrefabInternal: {fileID: 1156946676}
+--- !u!114 &107001173 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114397594093032924, guid: 0fbbbaba079bd4b4b8c41e05c8054c3a,
+    type: 2}
+  m_PrefabInternal: {fileID: 1156946676}
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &112687436
 GameObject:
   m_ObjectHideFlags: 0
@@ -3260,12 +3267,19 @@ MonoBehaviour:
   _textMeshes: []
   _texts:
   - {fileID: 1156946677}
+  - {fileID: 107001173}
   _chnSimpStrings:
   - "\u4F60\u597D\uFF0C\u6B22\u8FCE\u6765\u5230\u8FD9\u4E2A\u4E16\u754C"
+  - "\u8F7D\u5165\u4E2D...."
   _chnTradStrings:
   - "\u4F60\u597D\uFF0C\u6B61\u8FCE\u4F86\u5230\u9019\u500B\u4E16\u754C"
+  - "\u8F09\u5165\u4E2D..."
   _engStrings:
   - Welcome to this world, Stranger
+  - loading...
+  _chnSimpFont: {fileID: 12800000, guid: 39538771da40bfa4a8294773b5304edf, type: 3}
+  _chnTradFont: {fileID: 12800000, guid: 100b581ce2acda8409d52aa8c8b33d1c, type: 3}
+  _engFont: {fileID: 12800000, guid: dff96dc21644a0e47b8232edcb804d6f, type: 3}
 --- !u!224 &351681132
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6442,6 +6456,7 @@ MonoBehaviour:
   BG: []
   _spriteName: Map
   _levelNumber: 3
+  _startFrame: 0
   _frameNumber: 48
   _frameRate: 12
   Begin: 0
@@ -10771,6 +10786,24 @@ Prefab:
       propertyPath: m_Name
       value: Random Names
       objectReference: {fileID: 0}
+    - target: {fileID: 114000011771309408, guid: f5cee020620c37e478f6e972a12f9af9,
+        type: 2}
+      propertyPath: _chnSimpFont
+      value: 
+      objectReference: {fileID: 12800000, guid: 39538771da40bfa4a8294773b5304edf,
+        type: 3}
+    - target: {fileID: 114000011771309408, guid: f5cee020620c37e478f6e972a12f9af9,
+        type: 2}
+      propertyPath: _chnTradFont
+      value: 
+      objectReference: {fileID: 12800000, guid: 100b581ce2acda8409d52aa8c8b33d1c,
+        type: 3}
+    - target: {fileID: 114000011771309408, guid: f5cee020620c37e478f6e972a12f9af9,
+        type: 2}
+      propertyPath: _engFont
+      value: 
+      objectReference: {fileID: 12800000, guid: dff96dc21644a0e47b8232edcb804d6f,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f5cee020620c37e478f6e972a12f9af9, type: 2}
   m_IsPrefabParent: 0
@@ -14697,7 +14730,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &2034969527
 MonoBehaviour:
   m_ObjectHideFlags: 0

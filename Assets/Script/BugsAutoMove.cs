@@ -28,11 +28,22 @@ public class BugsAutoMove : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         
+        Respawn();
+        // rand = Random.Range(0.5f,1f);
+        // this.transform.localScale = new Vector3(rand,rand,rand);
+        // RanDirection = Random.Range(-10, 10);
+        // InitRotation = this.transform.eulerAngles;
+    }
+
+    // void MoveDirectlyToEnd() {
+    //     iTween.MoveTo(this.gameObject, iTween.Hash("position", randomizedEnding , "speed", 1f, "oncomplete", "DestroyInsect", "movetopath", true, "orienttopath",true, "easetype", iTween.EaseType.linear));
+    // }
+
+    void Respawn() {
         transform.position = new Vector3(_startingPt.position.x + Random.Range(-Xrange, Xrange), _startingPt.position.y + Random.Range(0f, 1f), _startingPt.position.z);
         randomizedEnding = new Vector3(_endingPt.position.x + Random.Range(-2f, 2f), _endingPt.position.y + Random.Range(0f, 1f), _endingPt.position.z);
         randomizedMidway = new Vector3(_midwayPt.position.x + Random.Range(-1f, 1f), _midwayPt.position.y + Random.Range(0f, 0f), _midwayPt.position.z);
         
-
         iTween.MoveTo(this.gameObject, iTween.Hash("path", new Vector3[]{randomizedMidway, randomizedEnding} , "time", Random.Range(4f, 6f), "oncomplete", "DestroyInsect", "movetopath", true, "orienttopath",true, "easetype", iTween.EaseType.linear));
 
         float rand = Random.Range(0, 4);
@@ -45,20 +56,10 @@ public class BugsAutoMove : MonoBehaviour {
             this.GetComponentInChildren<SpriteRenderer>().sprite = P2;
             // _sprite.transform.eulerAngles = new Vector3(0,0,-90f);
         }
-        // rand = Random.Range(0.5f,1f);
-        // this.transform.localScale = new Vector3(rand,rand,rand);
-        // RanDirection = Random.Range(-10, 10);
-        // InitRotation = this.transform.eulerAngles;
     }
-
-    // void MoveDirectlyToEnd() {
-    //     iTween.MoveTo(this.gameObject, iTween.Hash("position", randomizedEnding , "speed", 1f, "oncomplete", "DestroyInsect", "movetopath", true, "orienttopath",true, "easetype", iTween.EaseType.linear));
-    // }
-
-
     
     void DestroyInsect () {
-        Destroy(gameObject);
+        Respawn();
     }
 
 }

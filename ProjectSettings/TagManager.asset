@@ -12,6 +12,7 @@ TagManager:
   - BUGSDELETE
   - SPEEDDOWN
   - BUGSAVOID
+  - SPEED2
   layers:
   - Default
   - TransparentFX

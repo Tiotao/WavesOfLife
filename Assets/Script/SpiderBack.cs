@@ -3,6 +3,7 @@ using System.Collections;
 
 public class SpiderBack : MonoBehaviour {
     public GameObject Spider;
+    public GameObject BlockingInsects;
 	// Use this for initialization
 	void Start () {
 	
@@ -14,8 +15,13 @@ public class SpiderBack : MonoBehaviour {
 	}
     private void OnTriggerEnter(Collider other)
     {
+        
+
         if(other.CompareTag("Player"))
         {
+            if (BlockingInsects)
+                BlockingInsects.SetActive(true);
+
             if (Spider.GetComponent<SpiderStatus>().IsActive)
             {
                 Spider.GetComponent<Animator>().SetTrigger("SpiderBack");
@@ -32,7 +38,7 @@ public class SpiderBack : MonoBehaviour {
                 }
                 else
                 {
-                    Invoke("triggerAnimation", 1.0f);
+                    Invoke("triggerAnimation", 0.8f);
                 }
             }
         }

@@ -20,15 +20,22 @@ public class RandomNames : MonoBehaviour {
     private string LastName;
     public bool test;
 
+    public Font _chnSimpFont;
+	public Font _chnTradFont;
+	public Font _engFont;
+
 
     // Use this for initialization
     void Awake () {
         if (Application.systemLanguage == SystemLanguage.Chinese || Application.systemLanguage == SystemLanguage.ChineseSimplified) {
             TxtFile = _ChnSimpNames;
+            NameMovement.font = _chnSimpFont;
         } else if (Application.systemLanguage == SystemLanguage.ChineseTraditional) {
             TxtFile = _ChnTradNames;
+            NameMovement.font = _chnTradFont;
         } else {
             TxtFile = _EngNames;
+            NameMovement.font = _engFont;
         }
 
         Namelist = new ArrayList(60);

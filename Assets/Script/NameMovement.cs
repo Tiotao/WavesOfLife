@@ -12,6 +12,9 @@ public class NameMovement : MonoBehaviour {
     public GameObject _camera;
     private TextMesh text;
 
+    public static Font font;
+    
+
     void Awake()
     {
         this.gameObject.GetComponent<MeshRenderer>().material.SetColor("_Color", colourPicker);
@@ -19,13 +22,18 @@ public class NameMovement : MonoBehaviour {
         _name = _RandomNames.GetName();
         text = GetComponent<TextMesh>();
         text.text = _name;
-        text.fontSize = Random.Range(15, 50);
+        text.fontSize = Random.Range(25, 50);
         _target = GameObject.Find("SpermGroup");
         _camera = GameObject.Find("Main Camera");
+        
+
+        
     }
 
     // Use this for initialization
     void Start() {
+        text.font = font;
+		text.GetComponent<MeshRenderer>().material = font.material;
         transform.localPosition = new Vector3(Random.Range(-20f, 20f), Random.Range(-20f, 20f), Random.Range(-20f, 20f)) - 50 * _target.transform.forward;
         transform.localEulerAngles = new Vector3(Camera.main.transform.eulerAngles.x, Camera.main.transform.eulerAngles.y, Camera.main.transform.eulerAngles.z) + new Vector3(Random.Range(-20f, 20f), Random.Range(-20f, 20f), Random.Range(-20f, 20f));
         transform.Rotate(Vector3.back * 180);

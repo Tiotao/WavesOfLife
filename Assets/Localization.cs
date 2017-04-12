@@ -16,7 +16,13 @@ public class Localization : MonoBehaviour {
 	public string[] _chnTradStrings;
 	public string[] _engStrings;
 
-	void Start () {
+	public Font _chnSimpFont;
+	public Font _chnTradFont;
+	public Font _engFont;
+
+	
+
+	void Awake () {
 
 		if (_texts.Length > 0) {
 			Localize(_texts);
@@ -30,32 +36,41 @@ public class Localization : MonoBehaviour {
 
 	void Localize(TextMesh[] textMeshes) {
 		if (Application.systemLanguage == SystemLanguage.Chinese || Application.systemLanguage == SystemLanguage.ChineseSimplified) {
-            ReplaceTextMesh(textMeshes, _chnSimpStrings);
+            ReplaceTextMesh(textMeshes, _chnSimpStrings, _chnSimpFont);
+			
         } else if (Application.systemLanguage == SystemLanguage.ChineseTraditional) {
-            ReplaceTextMesh(textMeshes, _chnTradStrings);
+            ReplaceTextMesh(textMeshes, _chnTradStrings, _chnTradFont);
         } else {
-            ReplaceTextMesh(textMeshes, _engStrings);
+            ReplaceTextMesh(textMeshes, _engStrings, _engFont);
         }
 	}
 
 	void Localize(Text[] texts) {
 		if (Application.systemLanguage == SystemLanguage.Chinese || Application.systemLanguage == SystemLanguage.ChineseSimplified) {
-            ReplaceText(texts, _chnSimpStrings);
+            ReplaceText(texts, _chnSimpStrings, _chnSimpFont);
         } else if (Application.systemLanguage == SystemLanguage.ChineseTraditional) {
-            ReplaceText(texts, _chnTradStrings);
+            ReplaceText(texts, _chnTradStrings, _chnTradFont);
         } else {
-            ReplaceText(texts, _engStrings);
+            ReplaceText(texts, _engStrings, _engFont);
         }
 	}
 
-	void ReplaceTextMesh(TextMesh[] str, string[] replacedString) {
+	void ReplaceTextMesh(TextMesh[] str, string[] replacedString, Font font) {
 		for (int i = 0; i < str.Length; i++) {
+			if (font) {
+				str[i].font = font;
+				str[i].GetComponent<MeshRenderer>().material = font.material;
+			}
 			str[i].text = replacedString[i];
 		}
 	}
 
-	void ReplaceText(Text[] str, string[] replacedString) {
+	void ReplaceText(Text[] str, string[] replacedString, Font font) {
 		for (int i = 0; i < str.Length; i++) {
+			if (font) {
+				str[i].font = font;
+				// str[i].GetComponent<MeshRenderer>().material = font.material;
+			}
 			str[i].text = replacedString[i];
 		}
 	}
