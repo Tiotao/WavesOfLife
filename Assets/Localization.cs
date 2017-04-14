@@ -23,6 +23,7 @@ public class Localization : MonoBehaviour {
 	
 
 	void Awake () {
+		Application.targetFrameRate = 120;
 
 		if (_texts.Length > 0) {
 			Localize(_texts);
@@ -32,6 +33,8 @@ public class Localization : MonoBehaviour {
 			Localize(_textMeshes);
 			return;
 		}
+
+
 	}
 
 	void Localize(TextMesh[] textMeshes) {
