@@ -200,7 +200,7 @@ PlayerSettings:
   AndroidTargetDevice: 3
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
-  AndroidKeystoreName: C:/Users/yiwenz/Desktop/Assets/Submission/WavesOfLife/src/user.keystore
+  AndroidKeystoreName: user.keystore
   AndroidKeyaliasName: yiwen
   AndroidTVCompatibility: 0
   AndroidIsGame: 1
