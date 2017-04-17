@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: fbf4496ae5531b449b8243df6d518f44
-timeCreated: 1491955214
+timeCreated: 1492391381
 licenseType: Pro
 TextureImporter:
   fileIDToRecycleName:
@@ -73,8 +73,8 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
   - buildTarget: Android
-    maxTextureSize: 2048
-    textureFormat: 13
+    maxTextureSize: 512
+    textureFormat: 47
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
@@ -90,85 +90,7 @@ TextureImporter:
     overridden: 1
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: level2_gaintTail_shadow_0
-      rect:
-        serializedVersion: 2
-        x: 187
-        y: 438
-        width: 398
-        height: 220
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: level2_gaintTail_shadow_1
-      rect:
-        serializedVersion: 2
-        x: 794
-        y: 411
-        width: 323
-        height: 220
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: level2_gaintTail_shadow_2
-      rect:
-        serializedVersion: 2
-        x: 395
-        y: 144
-        width: 331
-        height: 222
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: level2_gaintTail_shadow_3
-      rect:
-        serializedVersion: 2
-        x: 337
-        y: 232
-        width: 600
-        height: 377
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: level2_gaintTail_shadow_4
-      rect:
-        serializedVersion: 2
-        x: 543
-        y: 432
-        width: 181
-        height: 218
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: level2_gaintTail_shadow_5
-      rect:
-        serializedVersion: 2
-        x: 467
-        y: 193
-        width: 256
-        height: 242
-      alignment: 9
-      pivot: {x: 0.4478396, y: 0.4879756}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
+    sprites: []
     outline: []
   spritePackingTag: 
   userData: 
