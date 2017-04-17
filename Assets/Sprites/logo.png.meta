@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 60ff96bd6fc23fd44bdb49e2a9bbcc3d
-timeCreated: 1492393910
+timeCreated: 1492395426
 licenseType: Pro
 TextureImporter:
   fileIDToRecycleName:
@@ -82,10 +82,10 @@ TextureImporter:
       name: logo_0
       rect:
         serializedVersion: 2
-        x: 158
+        x: 0
         y: 319
-        width: 1718
-        height: 391
+        width: 2048
+        height: 393
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
