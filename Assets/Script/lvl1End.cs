@@ -63,8 +63,11 @@ public class lvl1End : MonoBehaviour {
             finalFish.GetComponent<PlayAniDeadFish>().startplay = true;
             iTween.FadeTo(Jelly.transform.Find("GlowPointSprite").gameObject, 0f, 0.5f);
             // Jelly.SetActive(false);
-            for(int i=0;i< walls.Length;i++)
+             walls = GameObject.FindGameObjectsWithTag("WALL");
+            for (int i=0;i< walls.Length;i++)
             {
+                if (walls[i].name == "Final_Fish")
+                    continue;
                 walls[i].SetActive(false);
             }
 

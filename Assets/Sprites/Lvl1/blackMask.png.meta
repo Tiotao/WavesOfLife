@@ -1,7 +1,7 @@
 fileFormatVersion: 2
 guid: 92bc91ecd6ec8584b97137a845b75f1f
-timeCreated: 1492391501
-licenseType: Pro
+timeCreated: 1492400893
+licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
     21300000: blackMask_0
@@ -76,6 +76,14 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 1
+  - buildTarget: iPhone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
