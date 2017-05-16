@@ -36,9 +36,9 @@ public class SpritesAnimation : MonoBehaviour {
     }
     void Start()
     {
-        for(int i = _startFrame; i <= _frameNumber; i++) {
-            StartCoroutine(LoadMapFrame(i));
-        }
+        // for(int i = _startFrame; i <= _frameNumber; i++) {
+        //     StartCoroutine(LoadMapFrame(i));
+        // }
         
         counter = 1f / _frameRate;
     }
